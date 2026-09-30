@@ -1,0 +1,110 @@
+{
+ "ranAt": "2026-09-30T13:01:43.078Z",
+ "log": [
+  {
+   "step": "store",
+   "base": "http://127.0.0.1:8088",
+   "version": "Mage-OS/3.5 (Community)"
+  },
+  {
+   "step": "setup",
+   "products": [
+    "TEST-C.700.600.2000.I",
+    "TEST-SHARED-2",
+    "TEST-NO-IMAGE"
+   ]
+  },
+  {
+   "step": "classify",
+   "result": [
+    {
+     "sku": "TEST-C.700.600.2000.I",
+     "need": "shared-image"
+    },
+    {
+     "sku": "TEST-SHARED-2",
+     "need": "shared-image"
+    },
+    {
+     "sku": "TEST-NO-IMAGE",
+     "need": "no-image"
+    }
+   ]
+  },
+  {
+   "step": "svg-upload",
+   "refused": "POST /products/TEST-NO-IMAGE/media: HTTP 400 The image content must be valid base64 encoded data."
+  },
+  {
+   "step": "upload",
+   "action": "added",
+   "entries": [
+    {
+     "id": 7,
+     "file": "/t/e/test-c-700-600-2000-i-sd-4f67ebfbc8.png",
+     "types": [
+      "image",
+      "small_image",
+      "thumbnail"
+     ],
+     "label": "Compression spring C.700.600.2000.I"
+    },
+    {
+     "id": 5,
+     "file": "/c/o/compression_product.png",
+     "types": [],
+     "label": null
+    }
+   ]
+  },
+  {
+   "step": "rerun",
+   "action": "unchanged",
+   "count": 2
+  },
+  {
+   "step": "storefront",
+   "url": "http://127.0.0.1:8088/test-spring-0-1790773291028.html",
+   "showsManagedImage": true,
+   "altLabel": true
+  },
+  {
+   "step": "replace",
+   "action": "replaced",
+   "removed": [
+    7
+   ],
+   "entries": [
+    {
+     "id": 8,
+     "file": "/t/e/test-c-700-600-2000-i-sd-c211bc6081.png",
+     "types": [
+      "image",
+      "small_image",
+      "thumbnail"
+     ]
+    },
+    {
+     "id": 5,
+     "file": "/c/o/compression_product.png",
+     "types": []
+    }
+   ]
+  },
+  {
+   "step": "rollback",
+   "action": "rolled-back",
+   "entries": [
+    {
+     "id": 5,
+     "file": "/c/o/compression_product.png",
+     "types": [
+      "image",
+      "small_image",
+      "thumbnail"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,3041 @@
+[
+ {
+  "sku": "C.180.220.0630.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124292/s/c-180-220-0630-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "2.2",
+   "id": "13.6",
+   "od": "18",
+   "freeLength": "63",
+   "legLength": null,
+   "coils": "13",
+   "legPosition": null,
+   "pitch": "5.3",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.180.300.0780.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124294/s/c-180-300-0780-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3",
+   "id": "12",
+   "od": "18",
+   "freeLength": "78",
+   "legLength": null,
+   "coils": "16.6",
+   "legPosition": null,
+   "pitch": "4.93",
+   "material": "Music Wire",
+   "rotation": null,
+   "lengthAtMaxLoad": "57.32",
+   "blockLength": "51.3",
+   "grinding": "1"
+  },
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
+  }
+ },
+ {
+  "sku": "C.248.320.0224.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124299/s/c-248-320-0224-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3.2",
+   "id": "18.4",
+   "od": "24.8",
+   "freeLength": "22.4",
+   "legLength": null,
+   "coils": "4.8",
+   "legPosition": null,
+   "pitch": "5.71",
+   "material": "Music Wire",
+   "rotation": null,
+   "lengthAtMaxLoad": "18.46",
+   "blockLength": "16.96",
+   "grinding": "1"
+  },
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
+  }
+ },
+ {
+  "sku": "C.371.320.1020.AP",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124307/s/c-371-320-1020-ap/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3.2",
+   "id": "30.7",
+   "od": "37.1",
+   "freeLength": "102",
+   "legLength": null,
+   "coils": "7.1",
+   "legPosition": null,
+   "pitch": "18.72",
+   "material": "Music Wire",
+   "rotation": null,
+   "lengthAtMaxLoad": "45.05",
+   "blockLength": "24.32",
+   "grinding": "1"
+  },
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
+  }
+ },
+ {
+  "sku": "C.600.600.3600.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124127/s/c-600-600-3600-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "6",
+   "od": "60",
+   "id": "48",
+   "coils": "23",
+   "freeLength": "360",
+   "pitch": "16.57",
+   "lengthAtMaxLoad": "174.9",
+   "blockLength": "147",
+   "grinding": "0",
+   "material": "Stainless Steel"
+  },
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
+  }
+ },
+ {
+  "sku": "C.618.500.2500.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124139/s/c-618-500-2500-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "5",
+   "od": "61.8",
+   "id": "51.8",
+   "coils": "10.6",
+   "freeLength": "250",
+   "pitch": "27.98",
+   "lengthAtMaxLoad": "82.57",
+   "blockLength": "55.5",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.620.450.0800.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124151/s/c-620-450-0800-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "4.5",
+   "od": "62",
+   "id": "53",
+   "coils": "5.2",
+   "freeLength": "80",
+   "pitch": "22.18",
+   "lengthAtMaxLoad": "30.61",
+   "blockLength": "25.65",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.620.500.0800.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124153/s/c-620-500-0800-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "5",
+   "od": "62",
+   "id": "52",
+   "coils": "5.5",
+   "freeLength": "80",
+   "pitch": "19.99",
+   "lengthAtMaxLoad": "35.16",
+   "blockLength": "30",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.620.550.0800.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124154/s/c-620-550-0800-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "5.5",
+   "od": "62",
+   "id": "51",
+   "coils": "5.8",
+   "freeLength": "80",
+   "pitch": "18.15",
+   "lengthAtMaxLoad": "40.04",
+   "blockLength": "34.65",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.640.600.0800.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124168/s/c-640-600-0800-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "6",
+   "od": "64",
+   "id": "52",
+   "coils": "5.8",
+   "freeLength": "80",
+   "pitch": "17.89",
+   "lengthAtMaxLoad": "43.26",
+   "blockLength": "37.79",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.660.300.0800.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124171/s/c-660-300-0800-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3",
+   "id": "60",
+   "od": "66",
+   "freeLength": "80",
+   "legLength": null,
+   "coils": "4",
+   "legPosition": null,
+   "pitch": "36.99",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.660.300.3600.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124173/s/c-660-300-3600-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3",
+   "id": "60",
+   "od": "66",
+   "freeLength": "360",
+   "legLength": null,
+   "coils": "11.2",
+   "legPosition": null,
+   "pitch": "38.47",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.660.320.0500.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124174/s/c-660-320-0500-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3.2",
+   "id": "59.6",
+   "od": "66",
+   "freeLength": "50",
+   "legLength": null,
+   "coils": "3.3",
+   "legPosition": null,
+   "pitch": "33.53",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.660.320.2000.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124178/s/c-660-320-2000-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3.2",
+   "id": "59.6",
+   "od": "66",
+   "freeLength": "200",
+   "legLength": null,
+   "coils": "7.4",
+   "legPosition": null,
+   "pitch": "35.9",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.660.360.3600.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124180/s/c-660-360-3600-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3.6",
+   "id": "58.8",
+   "od": "66",
+   "freeLength": "360",
+   "legLength": null,
+   "coils": "13.2",
+   "legPosition": null,
+   "pitch": "31.49",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.660.400.0800.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124181/s/c-660-400-0800-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "4",
+   "id": "58",
+   "od": "66",
+   "freeLength": "80",
+   "legLength": null,
+   "coils": "4.6",
+   "legPosition": null,
+   "pitch": "27.69",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.660.400.3600.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124183/s/c-660-400-3600-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "4",
+   "id": "58",
+   "od": "66",
+   "freeLength": "360",
+   "legLength": null,
+   "coils": "14.6",
+   "legPosition": null,
+   "pitch": "27.93",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.660.550.0500.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124184/s/c-660-550-0500-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "5.5",
+   "od": "66",
+   "id": "55",
+   "coils": "3.9",
+   "freeLength": "50",
+   "pitch": "20.49",
+   "lengthAtMaxLoad": "27.14",
+   "blockLength": "24.2",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.660.600.0800.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124187/s/c-660-600-0800-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "6",
+   "od": "66",
+   "id": "54",
+   "coils": "5.6",
+   "freeLength": "80",
+   "pitch": "18.88",
+   "lengthAtMaxLoad": "41.99",
+   "blockLength": "36.59",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.680.300.1000.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124188/s/c-680-300-1000-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3",
+   "id": "62",
+   "od": "68",
+   "freeLength": "100",
+   "legLength": null,
+   "coils": "4.3",
+   "legPosition": null,
+   "pitch": "40.86",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.680.300.1600.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124189/s/c-680-300-1600-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3",
+   "id": "62",
+   "od": "68",
+   "freeLength": "160",
+   "legLength": null,
+   "coils": "5.8",
+   "legPosition": null,
+   "pitch": "40.52",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.680.320.0800.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124192/s/c-680-320-0800-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3.2",
+   "id": "61.6",
+   "od": "68",
+   "freeLength": "80",
+   "legLength": null,
+   "coils": "4",
+   "legPosition": null,
+   "pitch": "36.79",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.680.320.1250.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124193/s/c-680-320-1250-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3.2",
+   "id": "61.6",
+   "od": "68",
+   "freeLength": "125",
+   "legLength": null,
+   "coils": "5.2",
+   "legPosition": null,
+   "pitch": "37.06",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.680.320.3600.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": null,
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3.2",
+   "id": "61.6",
+   "od": "68",
+   "freeLength": "360",
+   "legLength": null,
+   "coils": "11.3",
+   "legPosition": null,
+   "pitch": "38.02",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.680.360.0500.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124195/s/c-680-360-0500-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3.6",
+   "id": "60.8",
+   "od": "68",
+   "freeLength": "50",
+   "legLength": null,
+   "coils": "3.3",
+   "legPosition": null,
+   "pitch": "32.92",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.680.360.0800.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124197/s/c-680-360-0800-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3.6",
+   "id": "60.8",
+   "od": "68",
+   "freeLength": "80",
+   "legLength": null,
+   "coils": "4.2",
+   "legPosition": null,
+   "pitch": "33.09",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.680.400.1000.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124199/s/c-680-400-1000-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "4",
+   "id": "60",
+   "od": "68",
+   "freeLength": "100",
+   "legLength": null,
+   "coils": "5.1",
+   "legPosition": null,
+   "pitch": "29.67",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.680.400.1600.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124200/s/c-680-400-1600-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "4",
+   "id": "60",
+   "od": "68",
+   "freeLength": "160",
+   "legLength": null,
+   "coils": "7.2",
+   "legPosition": null,
+   "pitch": "29.23",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.680.450.1600.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124203/s/c-680-450-1600-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "4.5",
+   "od": "68",
+   "id": "59",
+   "coils": "7.8",
+   "freeLength": "160",
+   "pitch": "26.03",
+   "lengthAtMaxLoad": "47.75",
+   "blockLength": "37.35",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.680.500.1200.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124204/s/c-680-500-1200-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "5",
+   "od": "68",
+   "id": "58",
+   "coils": "5.5",
+   "freeLength": "120",
+   "pitch": "31.42",
+   "lengthAtMaxLoad": "35.91",
+   "blockLength": "30",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.680.500.1800.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124206/s/c-680-500-1800-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "5",
+   "od": "68",
+   "id": "58",
+   "coils": "7.5",
+   "freeLength": "180",
+   "pitch": "30.91",
+   "lengthAtMaxLoad": "49.29",
+   "blockLength": "40",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.680.500.3600.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124208/s/c-680-500-3600-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "5",
+   "od": "68",
+   "id": "58",
+   "coils": "16.8",
+   "freeLength": "360",
+   "pitch": "23.64",
+   "lengthAtMaxLoad": "116.52",
+   "blockLength": "91.5",
+   "grinding": null,
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.680.500.3950.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124210/s/c-680-500-3950-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "5",
+   "od": "68",
+   "id": "58",
+   "coils": "14.5",
+   "freeLength": "395",
+   "pitch": "30.8",
+   "lengthAtMaxLoad": "96.13",
+   "blockLength": "75",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.680.550.1600.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124213/s/c-680-550-1600-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "5.5",
+   "od": "68",
+   "id": "57",
+   "coils": "8.9",
+   "freeLength": "160",
+   "pitch": "21.59",
+   "lengthAtMaxLoad": "62.84",
+   "blockLength": "51.7",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.680.550.2000.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124214/s/c-680-550-2000-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "5.5",
+   "od": "68",
+   "id": "57",
+   "coils": "10.7",
+   "freeLength": "200",
+   "pitch": "21.72",
+   "lengthAtMaxLoad": "75.64",
+   "blockLength": "61.59",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.680.600.3600.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124216/s/c-680-600-1000-a/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "6",
+   "od": "68",
+   "id": "56",
+   "coils": "19.3",
+   "freeLength": "360",
+   "pitch": "20.11",
+   "lengthAtMaxLoad": "151.8",
+   "blockLength": "124.8",
+   "grinding": null,
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.690.560.1000.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124219/s/c-690-560-1000-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "5.6",
+   "od": "69",
+   "id": "57.8",
+   "coils": "6.1",
+   "freeLength": "100",
+   "pitch": "21.65",
+   "lengthAtMaxLoad": "43.66",
+   "blockLength": "36.95",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.690.560.2960.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124221/s/c-690-560-2960-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "5.6",
+   "od": "69",
+   "id": "57.8",
+   "coils": "20.5",
+   "freeLength": "296",
+   "pitch": "15.39",
+   "lengthAtMaxLoad": "147.87",
+   "blockLength": "117.6",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.692.560.0500.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124223/s/c-692-560-0500-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "5.6",
+   "od": "69.2",
+   "id": "58",
+   "coils": "3.8",
+   "freeLength": "50",
+   "pitch": "21.55",
+   "lengthAtMaxLoad": "27.03",
+   "blockLength": "24.08",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  },
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
+  }
+ },
+ {
+  "sku": "C.692.560.0800.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124224/s/c-692-560-0800-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "5.6",
+   "od": "69.2",
+   "id": "58",
+   "coils": "5.2",
+   "freeLength": "80",
+   "pitch": "21.49",
+   "lengthAtMaxLoad": "37.17",
+   "blockLength": "31.92",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.692.560.2000.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124226/s/c-692-560-2000-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "5.6",
+   "od": "69.2",
+   "id": "58",
+   "coils": "8.1",
+   "freeLength": "200",
+   "pitch": "30.93",
+   "lengthAtMaxLoad": "69.19",
+   "blockLength": "48.16",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.700.320.0800.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124228/s/c-700-320-0800-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3.2",
+   "id": "63.6",
+   "od": "70",
+   "freeLength": "80",
+   "legLength": null,
+   "coils": "3.9",
+   "legPosition": null,
+   "pitch": "38.73",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.700.320.1000.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124230/s/c-700-320-1000-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3.2",
+   "id": "63.6",
+   "od": "70",
+   "freeLength": "100",
+   "legLength": null,
+   "coils": "4.4",
+   "legPosition": null,
+   "pitch": "38.99",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.700.320.1250.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124231/s/c-700-320-1250-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3.2",
+   "id": "63.6",
+   "od": "70",
+   "freeLength": "125",
+   "legLength": null,
+   "coils": "5",
+   "legPosition": null,
+   "pitch": "39.53",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.700.360.1600.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124234/s/c-700-360-1600-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3.6",
+   "id": "62.8",
+   "od": "70",
+   "freeLength": "160",
+   "legLength": null,
+   "coils": "6.4",
+   "legPosition": null,
+   "pitch": "34.72",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.700.400.1450.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124237/s/c-700-400-1450-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "4",
+   "id": "62",
+   "od": "70",
+   "freeLength": "145",
+   "legLength": null,
+   "coils": "5.5",
+   "legPosition": null,
+   "pitch": "39.14",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.700.400.3400.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124239/s/c-700-400-3400-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "4",
+   "id": "62",
+   "od": "70",
+   "freeLength": "340",
+   "legLength": null,
+   "coils": "12.6",
+   "legPosition": null,
+   "pitch": "31.32",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.700.450.1200.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124242/s/c-700-450-1200-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "4.5",
+   "od": "70",
+   "id": "61",
+   "coils": "6.1",
+   "freeLength": "120",
+   "pitch": "27.07",
+   "lengthAtMaxLoad": "37.4",
+   "blockLength": "29.7",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.700.500.2800.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124245/s/c-700-500-2800-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "5",
+   "od": "70",
+   "id": "60",
+   "coils": "12.9",
+   "freeLength": "280",
+   "pitch": "24.77",
+   "lengthAtMaxLoad": "86.26",
+   "blockLength": "67",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.700.500.3600.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124246/s/c-700-500-3600-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "5",
+   "od": "70",
+   "id": "60",
+   "coils": "16.1",
+   "freeLength": "360",
+   "pitch": "24.82",
+   "lengthAtMaxLoad": "112.92",
+   "blockLength": "88",
+   "grinding": null,
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.700.550.3600.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124248/s/c-700-550-3600-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "5.5",
+   "od": "70",
+   "id": "59",
+   "coils": "17.3",
+   "freeLength": "360",
+   "pitch": "22.81",
+   "lengthAtMaxLoad": "129.17",
+   "blockLength": "103.4",
+   "grinding": null,
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.700.600.0600.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124249/s/c-700-600-0600-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "6",
+   "od": "70",
+   "id": "58",
+   "coils": "4.3",
+   "freeLength": "60",
+   "pitch": "20.86",
+   "lengthAtMaxLoad": "32.52",
+   "blockLength": "28.79",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.700.600.1200.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124250/s/c-700-600-1200-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "6",
+   "od": "70",
+   "id": "58",
+   "coils": "7.1",
+   "freeLength": "120",
+   "pitch": "21.17",
+   "lengthAtMaxLoad": "53.87",
+   "blockLength": "45.59",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  },
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
+  }
+ },
+ {
+  "sku": "C.700.600.2000.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124251/s/c-700-600-2000-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "6",
+   "od": "70",
+   "id": "58",
+   "coils": "10.9",
+   "freeLength": "200",
+   "pitch": "21.12",
+   "lengthAtMaxLoad": "82.85",
+   "blockLength": "68.4",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  },
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
+  }
+ },
+ {
+  "sku": "C.720.300.0500.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124252/s/c-720-300-0500-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3",
+   "id": "66",
+   "od": "72",
+   "freeLength": "50",
+   "legLength": null,
+   "coils": "3.1",
+   "legPosition": null,
+   "pitch": "39.99",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.720.320.1000.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124255/s/c-720-320-1000-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3.2",
+   "id": "65.6",
+   "od": "72",
+   "freeLength": "100",
+   "legLength": null,
+   "coils": "4.2",
+   "legPosition": null,
+   "pitch": "42.54",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.720.360.0500.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/124258/s/c-720-360-0500-a/category/540/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3.6",
+   "id": "64.8",
+   "od": "72",
+   "freeLength": "50",
+   "legLength": null,
+   "coils": "3.2",
+   "legPosition": null,
+   "pitch": "35.66",
+   "material": "Music Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "C.980.500.1600.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/53877/s/c-980-500-1600-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "5",
+   "od": "98",
+   "id": "88",
+   "coils": "5.2",
+   "freeLength": "160",
+   "pitch": "46.87",
+   "lengthAtMaxLoad": "38.4",
+   "blockLength": "28.5",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  }
+ },
+ {
+  "sku": "C.980.550.1000.I",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Large springs: ( 4.1 to 6 mm  wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/stainless-steel/large-springs-4-1-to-6-mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/53880/s/c-980-550-1000-i/category/545/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "5.5",
+   "od": "98",
+   "id": "87",
+   "coils": "4.1",
+   "freeLength": "100",
+   "pitch": "42.38",
+   "lengthAtMaxLoad": "31.34",
+   "blockLength": "25.29",
+   "grinding": "1",
+   "material": "Stainless Steel"
+  },
+  "currentImage": {
+   "file": "compression_spring_537.png",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_spring_537.png",
+   "readAt": "2026-09-30"
+  }
+ },
+ {
+  "sku": "XC.280.300.1500.A",
+  "family": "compression",
+  "categoryPath": [
+   "Springs",
+   "Compression",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/compression/music-wire/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": null,
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3",
+   "id": null,
+   "od": "28",
+   "freeLength": "150",
+   "legLength": null,
+   "coils": null,
+   "legPosition": null,
+   "pitch": null,
+   "material": "Piano Wire",
+   "rotation": null
+  }
+ },
+ {
+  "sku": "U.060.100.0614.AX",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109678/s/u-060-100-0614-ax/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1",
+   "od": "6",
+   "freeLength": "61.4",
+   "lengthAtMaxLoad": "99.531066",
+   "coils": "53.75",
+   "material": "Music Wire",
+   "hookPosition": "270",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.061.085.0572.AX",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109647/s/u-061-085-0572-ax/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "0.85",
+   "od": "6.1",
+   "freeLength": "57.2",
+   "lengthAtMaxLoad": "115.752863",
+   "coils": "57.75",
+   "material": "Music Wire",
+   "hookPosition": "270",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.061.085.1016.IX",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109658/s/u-061-085-1016-ix/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "0.85",
+   "od": "6.1",
+   "freeLength": "101.6",
+   "lengthAtMaxLoad": "212.624377",
+   "coils": "109.75",
+   "material": "Stainless Steel",
+   "hookPosition": "270",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german",
+  "currentImage": {
+   "file": "german_127.png",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/g/e/german_127.png",
+   "readAt": "2026-09-30"
+  }
+ },
+ {
+  "sku": "U.075.100.0182.A",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109644/s/u-075-100-0182-a/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1",
+   "od": "7.5",
+   "freeLength": "18.2",
+   "lengthAtMaxLoad": "29.316117",
+   "coils": "8.5",
+   "material": "Music Wire",
+   "hookPosition": "180",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.083.130.0350.AX",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109636/s/u-083-130-0350-ax/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.3",
+   "od": "8.3",
+   "freeLength": "35",
+   "lengthAtMaxLoad": "54.731054",
+   "coils": "18.75",
+   "material": "Music Wire",
+   "hookPosition": "270",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.084.140.0500.AX",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109695/s/u-084-140-0500-ax/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.4",
+   "od": "8.4",
+   "freeLength": "50",
+   "lengthAtMaxLoad": "77.020451",
+   "coils": "28.75",
+   "material": "Music Wire",
+   "hookPosition": "270",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.090.125.0889.IX",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109694/s/u-090-125-0889-ix/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.25",
+   "od": "9",
+   "freeLength": "88.9",
+   "lengthAtMaxLoad": "176.909098",
+   "coils": "61.75",
+   "material": "Stainless Steel",
+   "hookPosition": "270",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.091.085.0444.AX",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109676/s/u-091-085-0444-ax/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "0.85",
+   "od": "9.1",
+   "freeLength": "44.4",
+   "lengthAtMaxLoad": "151.073552",
+   "coils": "37.75",
+   "material": "Music Wire",
+   "hookPosition": "270",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.092.110.0410.IX",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109660/s/u-092-110-0410-ix/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.1",
+   "od": "9.2",
+   "freeLength": "41",
+   "lengthAtMaxLoad": "89.729519",
+   "coils": "25.75",
+   "material": "Stainless Steel",
+   "hookPosition": "270",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.092.140.0350.IX",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109680/s/u-092-140-0350-ix/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.4",
+   "od": "9.2",
+   "freeLength": "35",
+   "lengthAtMaxLoad": "55.535348",
+   "coils": "16.75",
+   "material": "Stainless Steel",
+   "hookPosition": "270",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.092.150.0250.IX",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109648/s/u-092-150-0250-ix/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.5",
+   "od": "9.2",
+   "freeLength": "25",
+   "lengthAtMaxLoad": "34.391349",
+   "coils": "8.75",
+   "material": "Stainless Steel",
+   "hookPosition": "270",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.092.150.1270.IX",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109668/s/u-092-150-1270-ix/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.5",
+   "od": "9.2",
+   "freeLength": "127",
+   "lengthAtMaxLoad": "209.375583",
+   "coils": "76.75",
+   "material": "Stainless Steel",
+   "hookPosition": "270",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.095.130.0700.A",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109662/s/u-095-130-0700-a/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.3",
+   "od": "9.5",
+   "freeLength": "70",
+   "lengthAtMaxLoad": "137.646206",
+   "coils": "44.5",
+   "material": "Music Wire",
+   "hookPosition": "180",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.112.125.0827.A",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109669/s/u-112-125-0827-a/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.25",
+   "od": "11.2",
+   "freeLength": "82.7",
+   "lengthAtMaxLoad": "219.024486",
+   "coils": "54.5",
+   "material": "Music Wire",
+   "hookPosition": "180",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.127.120.0640.AX",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109691/s/u-127-120-0640-ax/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.2",
+   "od": "12.7",
+   "freeLength": "64",
+   "lengthAtMaxLoad": "206.193682",
+   "coils": "38.75",
+   "material": "Music Wire",
+   "hookPosition": "270",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.127.125.0963.AX",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109696/s/u-127-125-0963-ax/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.25",
+   "od": "12.7",
+   "freeLength": "96.3",
+   "lengthAtMaxLoad": "311.615228",
+   "coils": "62.75",
+   "material": "Music Wire",
+   "hookPosition": "270",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.127.175.0570.A",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109698/s/u-127-175-0570-a/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.75",
+   "od": "12.7",
+   "freeLength": "57",
+   "lengthAtMaxLoad": "101.867578",
+   "coils": "23.5",
+   "material": "Music Wire",
+   "hookPosition": "180",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.130.100.0592.A",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109672/s/u-130-100-0592-a/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1",
+   "od": "13",
+   "freeLength": "59.2",
+   "lengthAtMaxLoad": "269.755665",
+   "coils": "40.5",
+   "material": "Music Wire",
+   "hookPosition": "180",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.130.120.0410.I",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109670/s/u-130-120-0410-i/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.2",
+   "od": "13",
+   "freeLength": "41",
+   "lengthAtMaxLoad": "117.317589",
+   "coils": "19.5",
+   "material": "Stainless Steel",
+   "hookPosition": "180",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.159.175.0570.I",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109655/s/u-159-175-0570-i/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.75",
+   "od": "15.9",
+   "freeLength": "57",
+   "lengthAtMaxLoad": "128.505581",
+   "coils": "20.5",
+   "material": "Stainless Steel",
+   "hookPosition": "180",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.160.180.0800.A",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109702/s/u-160-180-0800-a/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.8",
+   "od": "16",
+   "freeLength": "80",
+   "lengthAtMaxLoad": "187.789069",
+   "coils": "32.5",
+   "material": "Music Wire",
+   "hookPosition": "180",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german",
+  "currentImage": {
+   "file": "german_127.png",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/g/e/german_127.png",
+   "readAt": "2026-09-30"
+  }
+ },
+ {
+  "sku": "U.160.190.0698.A",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109684/s/u-160-190-0698-a/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.9",
+   "od": "16",
+   "freeLength": "69.8",
+   "lengthAtMaxLoad": "146.777865",
+   "coils": "25.5",
+   "material": "Music Wire",
+   "hookPosition": "180",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.165.175.0381.A",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109632/s/u-165-175-0381-a/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.75",
+   "od": "16.5",
+   "freeLength": "38.1",
+   "lengthAtMaxLoad": "70.081318",
+   "coils": "8.5",
+   "material": "Music Wire",
+   "hookPosition": "180",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.190.160.0444.I",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109690/s/u-190-160-0444-i/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.6",
+   "od": "19",
+   "freeLength": "44.4",
+   "lengthAtMaxLoad": "110.295867",
+   "coils": "10.5",
+   "material": "Stainless Steel",
+   "hookPosition": "180",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.190.175.0700.A",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109635/s/u-190-175-0700-a/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.75",
+   "od": "19",
+   "freeLength": "70",
+   "lengthAtMaxLoad": "200.973329",
+   "coils": "24.5",
+   "material": "Music Wire",
+   "hookPosition": "180",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.191.125.0890.I",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109674/s/u-191-125-0890-i/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.25",
+   "od": "19.1",
+   "freeLength": "89",
+   "lengthAtMaxLoad": "539.682222",
+   "coils": "48.5",
+   "material": "Stainless Steel",
+   "hookPosition": "180",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.200.140.0980.AX",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109634/s/u-200-140-0980-ax/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.4",
+   "od": "20",
+   "freeLength": "98",
+   "lengthAtMaxLoad": "527.501272",
+   "coils": "49.75",
+   "material": "Music Wire",
+   "hookPosition": "270",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.200.180.1000.AX",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109703/s/u-200-180-1000-ax/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.8",
+   "od": "20",
+   "freeLength": "100",
+   "lengthAtMaxLoad": "330.207274",
+   "coils": "39.75",
+   "material": "Music Wire",
+   "hookPosition": "270",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.210.140.0762.AX",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109650/s/u-210-140-0762-ax/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.4",
+   "od": "21",
+   "freeLength": "76.2",
+   "lengthAtMaxLoad": "393.745788",
+   "coils": "32.75",
+   "material": "Music Wire",
+   "hookPosition": "270",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "U.210.140.2150.A",
+  "family": "extension",
+  "categoryPath": [
+   "Springs",
+   "Tension Springs",
+   "German Hooks",
+   "Small Springs : ( 0.1mm to 2mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/extension-springs/german-hooks/small-springs-0-1mm-to-2mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/109710/s/u-210-140-2150-a/category/561/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "1.4",
+   "od": "21",
+   "freeLength": "215",
+   "lengthAtMaxLoad": "1490.035597",
+   "coils": "131.5",
+   "material": "Music Wire",
+   "hookPosition": "180",
+   "id": null,
+   "hooks": "2"
+  },
+  "hookType": "german"
+ },
+ {
+  "sku": "D.150.250.0450",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/72036/s/d-150-250-0450/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "2.5",
+   "id": "10",
+   "od": "15",
+   "freeLength": "13.75",
+   "legLength": "60",
+   "coils": "4.5",
+   "legPosition": "180",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "2"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "D.150.250.1075",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/71960/s/d-150-250-1075/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "2.5",
+   "id": "10",
+   "od": "15",
+   "freeLength": "29.375",
+   "legLength": "60",
+   "coils": "10.75",
+   "legPosition": "270",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "2"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "D.180.300.1075",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/71842/s/d-180-300-1075/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3",
+   "id": "12",
+   "od": "18",
+   "freeLength": "35.25",
+   "legLength": "72",
+   "coils": "10.75",
+   "legPosition": "270",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "2"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "D.182.220.0425",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/71819/s/d-182-220-0425/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "2.2",
+   "id": "13.8",
+   "od": "18.2",
+   "freeLength": "11.55",
+   "legLength": "72.8",
+   "coils": "4.25",
+   "legPosition": "90",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "2"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "D.246.360.0325",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/72060/s/d-246-360-0325/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3.6",
+   "id": "17.4",
+   "od": "24.6",
+   "freeLength": "15.3",
+   "legLength": "98.4",
+   "coils": "3.25",
+   "legPosition": "90",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "2"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "D.250.280.0525",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/72127/s/d-250-280-0525/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "2.8",
+   "id": "19.4",
+   "od": "25",
+   "freeLength": "17.5",
+   "legLength": "100",
+   "coils": "5.25",
+   "legPosition": "90",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "2"
+  },
+  "windingFromCategory": "right",
+  "currentImage": {
+   "file": "torsion_16.png",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/t/o/torsion_16.png",
+   "readAt": "2026-09-30"
+  }
+ },
+ {
+  "sku": "D.251.320.0625",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/72057/s/d-251-320-0625/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3.2",
+   "id": "18.7",
+   "od": "25.1",
+   "freeLength": "23.2",
+   "legLength": "100.4",
+   "coils": "6.25",
+   "legPosition": "90",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "2"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "D.255.400.0700",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/72044/s/d-255-400-0700/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "4",
+   "id": "17.5",
+   "od": "25.5",
+   "freeLength": "32",
+   "legLength": "102",
+   "coils": "7",
+   "legPosition": null,
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "2"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "D.275.250.0825",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/72116/s/d-275-250-0825/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "2.5",
+   "id": "22.5",
+   "od": "27.5",
+   "freeLength": "23.125",
+   "legLength": "110",
+   "coils": "8.25",
+   "legPosition": "90",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "2"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "D.305.400.0825",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/71949/s/d-305-400-0825/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "4",
+   "id": "22.5",
+   "od": "30.5",
+   "freeLength": "37",
+   "legLength": "122",
+   "coils": "8.25",
+   "legPosition": "90",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "2"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "D.305.400.0950",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/71827/s/d-305-400-0950/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "4",
+   "id": "22.5",
+   "od": "30.5",
+   "freeLength": "42",
+   "legLength": "122",
+   "coils": "9.5",
+   "legPosition": "180",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "2"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "D.355.400.0575",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/72000/s/d-355-400-0575/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "4",
+   "id": "27.5",
+   "od": "35.5",
+   "freeLength": "27",
+   "legLength": "142",
+   "coils": "5.75",
+   "legPosition": "270",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "2"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "D.355.400.0700",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/71853/s/d-355-400-0700/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "4",
+   "id": "27.5",
+   "od": "35.5",
+   "freeLength": "32",
+   "legLength": "142",
+   "coils": "7",
+   "legPosition": null,
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "2"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "D.408.320.1450",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/71945/s/d-408-320-1450/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3.2",
+   "id": "34.4",
+   "od": "40.8",
+   "freeLength": "49.6",
+   "legLength": "163.2",
+   "coils": "14.5",
+   "legPosition": "180",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "2"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "G.150.250.0950",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/71796/s/g-150-250-0950/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "2.5",
+   "id": "10",
+   "od": "15",
+   "freeLength": "26.25",
+   "legLength": "60",
+   "coils": "9.5",
+   "legPosition": "180",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "1"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "G.196.360.0575",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/71989/s/g-196-360-0575/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3.6",
+   "id": "12.4",
+   "od": "19.6",
+   "freeLength": "24.3",
+   "legLength": "78.4",
+   "coils": "5.75",
+   "legPosition": "270",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "1"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "G.201.220.1275",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/71924/s/g-201-220-1275/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "2.2",
+   "id": "15.7",
+   "od": "20.1",
+   "freeLength": "30.25",
+   "legLength": "80.4",
+   "coils": "12.75",
+   "legPosition": "270",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "1"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "G.220.300.0950",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/71915/s/g-220-300-0950/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3",
+   "id": "16",
+   "od": "22",
+   "freeLength": "31.5",
+   "legLength": "88",
+   "coils": "9.5",
+   "legPosition": "180",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "1"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "G.225.250.0200",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/71809/s/g-225-250-0200/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "2.5",
+   "id": "17.5",
+   "od": "22.5",
+   "freeLength": "7.5",
+   "legLength": "90",
+   "coils": "2",
+   "legPosition": null,
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "1"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "G.255.400.0825",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/71907/s/g-255-400-0825/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "4",
+   "id": "17.5",
+   "od": "25.5",
+   "freeLength": "37",
+   "legLength": "102",
+   "coils": "8.25",
+   "legPosition": "90",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "1"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "G.255.400.0950",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/71903/s/g-255-400-0950/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "4",
+   "id": "17.5",
+   "od": "25.5",
+   "freeLength": "42",
+   "legLength": "102",
+   "coils": "9.5",
+   "legPosition": "180",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "1"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "G.276.290.1275",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/71844/s/g-276-290-1275/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "2.9",
+   "id": "21.8",
+   "od": "27.6",
+   "freeLength": "39.875",
+   "legLength": "110.4",
+   "coils": "12.75",
+   "legPosition": "270",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "1"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "G.277.270.1175",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/71900/s/g-277-270-1175/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "2.7",
+   "id": "22.3",
+   "od": "27.7",
+   "freeLength": "34.425",
+   "legLength": "110.8",
+   "coils": "11.75",
+   "legPosition": "270",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "1"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "G.280.320.1200",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/71921/s/g-280-320-1200/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3.2",
+   "id": "21.6",
+   "od": "28",
+   "freeLength": "41.6",
+   "legLength": "112",
+   "coils": "12",
+   "legPosition": null,
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "1"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "G.317.270.0700",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/72030/s/g-317-270-0700/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "2.7",
+   "id": "26.3",
+   "od": "31.7",
+   "freeLength": "21.6",
+   "legLength": "126.8",
+   "coils": "7",
+   "legPosition": null,
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "1"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "G.320.300.0825",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/72004/s/g-320-300-0825/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "3",
+   "id": "26",
+   "od": "32",
+   "freeLength": "27.75",
+   "legLength": "128",
+   "coils": "8.25",
+   "legPosition": "90",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "1"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "G.405.400.0325",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/72001/s/g-405-400-0325/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "4",
+   "id": "32.5",
+   "od": "40.5",
+   "freeLength": "17",
+   "legLength": "162",
+   "coils": "3.25",
+   "legPosition": "90",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "1"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "G.405.400.0575",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/71822/s/g-405-400-0575/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "4",
+   "id": "32.5",
+   "od": "40.5",
+   "freeLength": "27",
+   "legLength": "162",
+   "coils": "5.75",
+   "legPosition": "270",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "1"
+  },
+  "windingFromCategory": "right"
+ },
+ {
+  "sku": "G.405.400.0950",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/71874/s/g-405-400-0950/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "4",
+   "id": "32.5",
+   "od": "40.5",
+   "freeLength": "42",
+   "legLength": "162",
+   "coils": "9.5",
+   "legPosition": "180",
+   "pitch": null,
+   "material": "Stainless Steel",
+   "rotation": "1"
+  },
+  "windingFromCategory": "right",
+  "currentImage": {
+   "file": "torsion_14.png",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/t/o/torsion_14.png",
+   "readAt": "2026-09-30"
+  }
+ },
+ {
+  "sku": "XD.285.250.0675",
+  "family": "torsion",
+  "categoryPath": [
+   "Springs",
+   "Torsion",
+   "Right Rotation",
+   "Medium Springs: ( 2.1 to 4mm wire diameter)"
+  ],
+  "categoryUrl": "https://www.vanel.tech/springs/torsion/right-rotation/medium-springs-2-1-to-4mm-wire-diameter.html",
+  "productUrl": "https://www.vanel.tech/catalog/product/view/id/380951/s/xd-285-250-0675/category/606/",
+  "readAt": "2026-09-30",
+  "attrs": {
+   "d": "2.5",
+   "id": null,
+   "od": "28.5",
+   "freeLength": null,
+   "legLength": null,
+   "coils": "5",
+   "legPosition": null,
+   "pitch": null,
+   "material": "304 Stainless Steel",
+   "rotation": "Right"
+  },
+  "windingFromCategory": "right"
+ }
+]

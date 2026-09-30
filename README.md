@@ -1,0 +1,50 @@
+# spring-drawings
+
+Line drawings of compression springs, generated from the attributes of their product sheets.
+For each reference, two files from the same record: a dimensioned specification drawing (SVG) and a
+clean catalog image (PNG, same framing for the whole family). No AI in the drawing, no network call.
+
+`data/springs.json` holds 120 records read on vanel.tech on 2026-09-30 (60 compression, 30 extension,
+30 torsion), each with the URL it was read from. Only the attributes a drawing needs are kept.
+
+## Run it
+
+```
+npm install
+npm test               # geometry, provenance, routing, image step (in-memory Magento)
+npm run render         # svg/<sku>.svg, svg/<sku>.catalog.svg, svg/<sku>.sources.json, svg/routing.json
+npm run png            # png/<sku>.png, 800 x 800, what gets uploaded to the store
+```
+
+Node 20 or later.
+
+## Where every line comes from
+
+- Every printed dimension is a value read on the sheet, printed as read (tested on every record).
+- Helix on the mean diameter, OD minus wire.
+- Coil count convention, established on the sheets read: on all 59 complete compression records,
+  free length = (coils - 2) x pitch + 2 x wire. Coils are therefore counted as total, one closed coil at
+  each end, and the drawn spring spans the free length exactly (tested).
+- Ground ends: read from the block length, (coils + 0.5) x wire when ground, (coils + 1.5) x wire when not;
+  every block length on the sheets fits one of the two (tested).
+- Winding sense is not on the sheet: drawn right-hand, and `sources.json` says so.
+- Length at max load is another state of the spring: it is a note, never drawn on the free silhouette.
+- A visitor who changes a value gets a hypothetical variant: changed values in ochre, the inside
+  diameter becomes "calculated", the max-load note disappears.
+
+## Routing
+
+`route()` sends each record to one of: drawn; held back (an essential value is empty on the sheet, one
+record here); review (values that do not make a spring); other family (extension and torsion springs have
+no template yet, nothing is drawn for them).
+
+## Magento
+
+`magento/client.mjs`: classify what needs an image (none, or only a family image shared by many SKUs),
+attach the PNG to the right SKU with the image roles, rerun without duplicate, replace only the file the
+pipeline manages, roll back. Checked end to end on a local test store, see `magento/README.md`.
+
+## What this does not prove
+
+Extension and torsion springs, converting CAD or STEP files, running on a live store, decoding Magento
+option values (here the category path stands in as the source).

@@ -1,0 +1,6 @@
+node_modules/
+svg/
+png/
+site/dist/
+data/current-images/
+magento/testbed/*.log

@@ -1,0 +1,17 @@
+# Local test store for the image upload step. Nothing here talks to a live shop.
+services:
+  db:
+    image: mariadb:11.4
+    environment: { MARIADB_ROOT_PASSWORD: root, MARIADB_DATABASE: magento, MARIADB_USER: magento, MARIADB_PASSWORD: magento }
+  search:
+    image: opensearchproject/opensearch:2.19.1
+    environment:
+      discovery.type: single-node
+      DISABLE_SECURITY_PLUGIN: "true"
+      DISABLE_INSTALL_DEMO_CONFIG: "true"
+      OPENSEARCH_JAVA_OPTS: "-Xms512m -Xmx512m"
+  shop:
+    build: .
+    depends_on: [db, search]
+    ports: ["127.0.0.1:8088:8080"]
+    command: ["php", "-S", "0.0.0.0:8080", "-t", "/app/pub", "/app/phpserver/router.php"]

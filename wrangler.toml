@@ -1,0 +1,14 @@
+# Static page only, served under theaipipe.com/vanel-springs/
+name = "vanel-springs"
+main = "site/worker.js"
+compatibility_date = "2026-09-01"
+workers_dev = false
+routes = [
+  { pattern = "theaipipe.com/vanel-springs*", zone_name = "theaipipe.com" }
+]
+
+[assets]
+directory = "./site/dist"
+binding = "ASSETS"
+html_handling = "auto-trailing-slash"
+run_worker_first = true

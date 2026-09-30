@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ressorts dessinés à leurs cotes</title>
+<meta name="description" content="Huit ressorts de compression de vanel.tech, dessinés au trait avec leurs cotes depuis les seuls attributs de leurs fiches.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <p class="where" data-i18n="where">Planche d'essai pour vanel.tech</p>
+  <div class="lang" role="group" aria-label="Langue / Language">
+    <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+  </div>
+</header>
+
+<main>
+  <section class="intro">
+    <h1 data-i18n="h1">Huit de vos ressorts, dessinés à leurs propres cotes.</h1>
+    <p class="lede" data-i18n="lede">Chaque dessin vient des seuls attributs de la fiche produit, lus sur vanel.tech le 30 septembre 2026. À gauche de chaque dessin, l'image que la fiche affiche ce jour-là.</p>
+  </section>
+
+  <section class="plate-wrap" aria-labelledby="plate-title">
+    <h2 id="plate-title" class="visually-hidden" data-i18n="plateTitle">Planche</h2>
+    <div class="plate">
+      <ol class="cells" id="cells"></ol>
+      <div class="plate-foot">
+        <p class="held" id="held"></p>
+        <table class="titleblock">
+          <tr><th colspan="2" data-i18n="tbTitle">Ressorts de compression, planche 1</th></tr>
+          <tr><td data-i18n="tbSource">Source</td><td data-i18n="tbSourceV">attributs des fiches vanel.tech, lus le 30/09/2026</td></tr>
+          <tr><td data-i18n="tbMethod">Méthode</td><td data-i18n="tbMethodV">gabarit paramétrique, aucune retouche</td></tr>
+          <tr><td data-i18n="tbLeft">À gauche</td><td data-i18n="tbLeftV">image affichée par la fiche le 30/09/2026</td></tr>
+          <tr><td data-i18n="tbKey">Couleurs</td><td><span class="key read" data-i18n="tbRead">cote lue dans la fiche</span></td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="try" aria-labelledby="try-title">
+    <div class="try-head">
+      <h2 id="try-title" data-i18n="tryTitle">Essayez une autre référence</h2>
+      <p data-i18n="tryLede">Collez une référence ou l'adresse de sa fiche : le ressort se dessine. Corrigez une cote, le dessin suit.</p>
+    </div>
+    <div class="try-grid">
+      <form class="controls" id="controls" autocomplete="off">
+        <label class="ref">
+          <span data-i18n="refLabel">Référence</span>
+          <input id="ref" name="ref" type="text" list="skus" spellcheck="false" placeholder="C.700.600.2000.I">
+          <datalist id="skus"></datalist>
+        </label>
+        <p class="ref-msg" id="refMsg" role="status" aria-live="polite"></p>
+        <fieldset class="dims" id="dims">
+          <legend data-i18n="dimsLegend">Cotes</legend>
+          <label><span data-i18n="fD">Diamètre du fil</span><span class="unit"><input name="d" inputmode="decimal"> mm</span></label>
+          <label><span data-i18n="fOd">Diamètre extérieur</span><span class="unit"><input name="od" inputmode="decimal"> mm</span></label>
+          <label><span data-i18n="fL">Longueur libre</span><span class="unit"><input name="freeLength" inputmode="decimal"> mm</span></label>
+          <label><span data-i18n="fN">Spires totales</span><span class="unit"><input name="coils" inputmode="decimal"></span></label>
+        </fieldset>
+        <p class="variant-msg" id="variantMsg" role="status" aria-live="polite"></p>
+        <button type="button" class="reset" id="reset" data-i18n="reset">Revenir aux valeurs de la fiche</button>
+      </form>
+      <div class="outputs">
+        <figure class="sheet">
+          <div id="sheet" class="sheet-svg"></div>
+          <figcaption>
+            <span data-i18n="capSheet">Dessin de spécification</span>
+            <button type="button" class="dl" id="dlSvg" data-i18n="dlSvg">Télécharger le SVG</button>
+          </figcaption>
+        </figure>
+        <figure class="catalog">
+          <div id="catalog" class="catalog-svg"></div>
+          <figcaption>
+            <span data-i18n="capCatalog">Image catalogue, même cadrage pour toutes les références</span>
+            <button type="button" class="dl" id="dlPng" data-i18n="dlPng">Télécharger le PNG</button>
+          </figcaption>
+        </figure>
+        <details class="sources">
+          <summary data-i18n="sourcesTitle">D'où vient chaque trait</summary>
+          <table id="sources"></table>
+          <p class="source-link" id="sourceLink"></p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="how" aria-labelledby="how-title">
+    <h2 id="how-title" data-i18n="howTitle">Ce que la chaîne fait déjà, et ce qui reste à brancher</h2>
+    <div class="how-body" id="howBody"></div>
+    <figure class="proof">
+      <img src="magento-test-store.jpg" alt="" width="800" height="300" loading="lazy">
+      <figcaption data-i18n="proofCap">La page produit de la boutique de test, avec l'image générée rattachée au SKU.</figcaption>
+    </figure>
+  </section>
+</main>
+
+<footer class="foot">
+  <img src="favicon.svg" alt="" width="18" height="18">
+  <p><span data-i18n="madeBy">Réalisé par</span> Frederic de Lavenne de Choulot, The AI Pipe. <a href="https://github.com/fred1433/spring-drawings" data-i18n="repo">Code et tests</a></p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
