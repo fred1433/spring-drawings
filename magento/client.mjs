@@ -61,19 +61,27 @@ export class Magento {
     return { sku, need: 'own-image', entries };
   }
 
-  // Attach the PNG as the main image of the SKU. Idempotent: same content, nothing happens.
-  // New content: the previous managed file is removed and the new one takes the roles.
+  // Attach the PNG as the main image of the SKU.
+  // Same content already in place with its roles and enabled: nothing happens (roles are repaired if needed).
+  // New content: the new file is uploaded and checked first; only then is the previous managed file removed.
   // Returns a journal entry that `rollback` can undo.
-  // `previous`: the journal of the last upsert on this SKU, so a rollback restores the state before the first one.
   async upsertManagedImage(sku, png, { label, dryRun = false, previous = null } = {}) {
+    const S = encodeURIComponent(sku);
     const entries = await this.media(sku);
     const hash = contentHash(png);
     const mine = entries.filter(isManaged);
-    if (mine.some((e) => hashOf(e) === hash)) return { sku, action: 'unchanged', hash };
+    const same = mine.find((e) => hashOf(e) === hash);
+    const healthy = (e) => e && !e.disabled && ROLES.every((t) => (e.types || []).includes(t));
+    if (same && mine.length === 1 && healthy(same)) return { sku, action: 'unchanged', hash };
     const previousRoles = previous?.previousRoles || entries.filter((e) => !isManaged(e)).map((e) => ({ id: e.id, types: e.types || [] }));
-    if (dryRun) return { sku, action: 'would-upload', hash, replaces: mine.map((e) => e.id) };
-    for (const e of mine) await this.call('DELETE', `/products/${encodeURIComponent(sku)}/media/${e.id}`);
-    const id = await this.call('POST', `/products/${encodeURIComponent(sku)}/media`, {
+    if (dryRun) return { sku, action: same ? 'would-repair' : 'would-upload', hash, replaces: mine.map((e) => e.id) };
+    if (same) {
+      // right file, wrong state: give it back its roles, enable it, drop any other managed copy
+      await this.call('PUT', `/products/${S}/media/${same.id}`, { entry: { id: same.id, media_type: same.media_type || 'image', label: label || same.label, position: 0, disabled: false, types: ROLES, file: same.file } });
+      for (const e of mine.filter((x) => x.id !== same.id)) await this.call('DELETE', `/products/${S}/media/${e.id}`);
+      return { sku, action: 'repaired', hash, entryId: same.id, previousRoles };
+    }
+    const id = Number(await this.call('POST', `/products/${S}/media`, {
       entry: {
         media_type: 'image',
         label: label || sku,
@@ -82,8 +90,16 @@ export class Magento {
         types: ROLES,
         content: { base64_encoded_data: Buffer.from(png).toString('base64'), type: 'image/png', name: managedName(sku, png) },
       },
-    });
-    return { sku, action: mine.length ? 'replaced' : 'added', hash, entryId: Number(id), removed: mine.map((e) => e.id), previousRoles };
+    }));
+    const after = await this.media(sku);
+    const added = after.find((e) => e.id === id);
+    if (!added || !isManaged(added) || hashOf(added) !== hash || !healthy(added)) {
+      const err = new Error(`${sku}: new image not in place after upload, previous image kept`);
+      err.journal = { sku, action: 'failed', hash, entryId: id, kept: mine.map((e) => e.id) };
+      throw err;
+    }
+    for (const e of mine) await this.call('DELETE', `/products/${S}/media/${e.id}`);
+    return { sku, action: mine.length ? 'replaced' : 'added', hash, entryId: id, removed: mine.map((e) => e.id), previousRoles };
   }
 
   // Undo an upsert: remove the managed entry and give the roles back to the entries that had them.

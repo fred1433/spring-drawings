@@ -25,7 +25,7 @@ const TXT = {
   fr: {
     wire: 'fil', od: 'Ø ext.', id: 'Ø int.', calc: 'calculé',
     lmax: 'Longueur à charge max.', coilsTotal: 'spires totales',
-    ground: 'Extrémités rapprochées et meulées', closed: 'Extrémités rapprochées, non meulées',
+    ground: 'Extrémités rapprochées et meulées', schematic: 'Extrémités représentées schématiquement', closed: 'Extrémités rapprochées, non meulées',
     family: 'Ressort de compression', source: 'Attributs lus sur vanel.tech le', variant: 'Variante hypothétique, cotes modifiées en ocre',
     material: { 'Stainless Steel': 'inox', 'Music Wire': 'corde à piano', 'Piano Wire': 'corde à piano' },
     field: { d: 'Diamètre du fil', od: 'Diamètre extérieur', id: 'Diamètre intérieur', freeLength: 'Longueur libre', coils: 'Nombre de spires', pitch: 'Pas', blockLength: 'Longueur à bloc', lengthAtMaxLoad: 'Longueur à charge max.' },
@@ -33,7 +33,7 @@ const TXT = {
   en: {
     wire: 'wire', od: 'OD', id: 'ID', calc: 'calculated',
     lmax: 'Length at max. load', coilsTotal: 'total coils',
-    ground: 'Closed and ground ends', closed: 'Closed ends, not ground',
+    ground: 'Closed and ground ends', schematic: 'Ends drawn schematically', closed: 'Closed ends, not ground',
     family: 'Compression spring', source: 'Attributes read on vanel.tech on', variant: 'Hypothetical variant, changed dimensions in ochre',
     material: {},
     field: { d: 'Wire diameter', od: 'Outside diameter', id: 'Inside diameter', freeLength: 'Free length', coils: 'Number of coils', pitch: 'Pitch', blockLength: 'Block length', lengthAtMaxLoad: 'Length at max. load' },
@@ -77,9 +77,31 @@ export function route(rec) {
   const missing = REQUIRED.filter((k) => num(rec.attrs[k]) === null);
   if (!endsOf(rec)) missing.push('blockLength');
   if (missing.length) return { route: 'held', reason: 'missing', fields: missing, productPageRead: !!rec.productPageRead };
+  // this template draws ground ends only: the catalog's free-length convention for unground ends is not settled yet
+  if (!endsOf(rec).ground) return { route: 'held', reason: 'ends-convention', fields: [] };
+  const bad = consistency(rec);
+  if (bad.length) return { route: 'review', reason: 'consistency', checks: bad };
   const m = model(rec);
   if (!m.ok) return { route: 'review', reason: m.reason };
   return { route: 'svg' };
+}
+
+// Direct checks of a record against the relations the drawing relies on. A failure sends the record to review.
+// "Drawable with this template" is all this says: nothing here validates the spring mechanically.
+export function consistency(rec) {
+  const a = Object.fromEntries(Object.entries(rec.attrs).map(([k, v]) => [k, num(v)]));
+  const out = [];
+  const drawnPitch = (a.freeLength - 2 * a.d) / (a.coils - 2);
+  // rounding on the sheet: pitch to 0.01 mm, coils to 0.1, so up to 0.05 x pitch / (coils - 2) from the coil count
+  const tolPitch = 0.006 + (0.05 * a.pitch) / (a.coils - 2);
+  if (Math.abs(drawnPitch - a.pitch) > tolPitch) out.push({ check: 'pitch', sheet: a.pitch, drawn: drawnPitch });
+  if (a.blockLength !== null && a.blockLength !== undefined) {
+    const best = Math.min(Math.abs(a.blockLength - (a.coils + 0.5) * a.d), Math.abs(a.blockLength - (a.coils + 1.5) * a.d));
+    if (best > 0.02 + 0.005 * a.blockLength) out.push({ check: 'blockLength', sheet: a.blockLength });
+  }
+  if (a.id !== null && a.id !== undefined && Math.abs(a.od - 2 * a.d - a.id) > 0.02) out.push({ check: 'id', sheet: a.id, od: a.od, d: a.d });
+  if (a.blockLength && a.freeLength < a.blockLength) out.push({ check: 'freeLength<block' });
+  return out;
 }
 
 // What a visitor may type: a plain decimal number (comma or point), within plausible bounds.
@@ -125,6 +147,8 @@ export function model(rec, overrides = {}) {
   const span = m.ground ? v.freeLength : v.freeLength - v.d;
   m.activePitch = (span - 2 * v.d) / (v.coils - 2);
   if (!(m.activePitch > v.d)) return { ...m, ok: false, reason: 'geometry' };
+  // a variant must stay longer than its block length (coils + 0.5) x wire for ground ends
+  if (m.variant && v.freeLength < (v.coils + (m.ground ? 0.5 : 1.5)) * v.d) return { ...m, ok: false, reason: 'geometry' };
   // inside diameter: read on the sheet unless the visitor changed wire or OD, then calculated
   if (!edited.d && !edited.od && v.id !== null && v.id !== undefined) { m.idValue = raw.id; m.idCalc = false; }
   else { m.idValue = String(Math.round((v.od - 2 * v.d) * 100) / 100); m.idCalc = true; }
@@ -275,13 +299,13 @@ function wireLeader(m, sv, S, maxY) {
 // Compact dimensioned side view for a catalog plate: free length, OD, wire.
 export function drawPlate(rec, lang = 'fr', overrides = {}) {
   const m = model(rec, overrides);
-  const W = 560, H = 236;
-  const S = { thin: 1, arrow: 8, font: 18, gap: 8 };
+  const W = 560, H = 250;
+  const S = { thin: 1.2, arrow: 10, font: 25, gap: 9 };
   const T = txt(lang);
   if (!m.ok) return { svg: '', model: m };
-  const sv = sideView(m, { x: 14, y: 56, w: 360, h: 134 }, 1.6, false, 'plate');
+  const sv = sideView(m, { x: 14, y: 62, w: 300, h: 128 }, 1.8, true, 'plate');
   let b = sv.svg;
-  b += hDim(sv.x0, sv.x1, sv.top, 34, mm(m, 'freeLength', lang), S, col(m, 'freeLength'));
+  b += hDim(sv.x0, sv.x1, sv.top, 40, mm(m, 'freeLength', lang), S, col(m, 'freeLength'));
   b += vDim(sv.top, sv.bot, sv.x1, sv.x1 + 20, `${T.od} ${mm(m, 'od', lang)}`, S, col(m, 'od'));
   const wl = wireLeader(m, sv, S, H - 14);
   b += leader(wl.x, wl.y, wl.x + 26, wl.ty, `${T.wire} ${mm(m, 'd', lang)}`, S, col(m, 'd'));
@@ -357,6 +381,7 @@ export function drawSheet(rec, lang = 'fr', overrides = {}) {
   if (m.raw.lengthAtMaxLoad && !m.variant) notes.push([`${T.lmax} : ${fmtNum(num(m.raw.lengthAtMaxLoad), lang)} mm`, READ]);
   notes.push([`${fmt(m.raw.coils, lang)} ${T.coilsTotal}`, col(m, 'coils')]);
   if (m.groundFrom !== 'unknown') notes.push([m.ground ? T.ground : T.closed, '#3f464d']);
+  notes.push([T.schematic, '#5b636b']);
   if (m.variant) notes.push([T.variant, EDITED]);
   b += notes.map(([n, c], i) => text(34, 500 + i * 23, n, 16, c, 'start', 'note')).join('');
   // title block

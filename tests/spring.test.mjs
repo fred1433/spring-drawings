@@ -9,7 +9,7 @@ const complete = comp.filter((r) => route(r).route === 'svg');
 
 test('the sheets read hold compression records', () => {
   assert.ok(comp.length >= 50, `only ${comp.length} compression records`);
-  assert.ok(complete.length >= 50);
+  assert.ok(complete.length >= 35);
 });
 
 test('coil convention: free length = (coils - 2) x pitch + 2 x wire on every complete record', () => {
@@ -66,7 +66,7 @@ test('every dimension printed is the value of its own field on the sheet, as rea
 });
 
 test('a record with an empty essential value is held back and nothing is drawn', () => {
-  const held = comp.filter((r) => route(r).route === 'held');
+  const held = comp.filter((r) => route(r).route === 'held' && route(r).reason === 'missing');
   assert.ok(held.length >= 1);
   for (const r of held) {
     assert.equal(drawSheet(r).svg, '');
@@ -191,4 +191,30 @@ test('specification sheet: end view and side view at one scale', () => {
     const ro = Number(svg.match(/class="ro" cx="[^"]+" cy="[^"]+" r="([\d.]+)"/)[1]);
     assert.ok(Math.abs(2 * ro - m.v.od * scale) <= 0.01 * m.v.od * scale + 0.02, r.sku);
   }
+});
+
+test('drawn pitch equals the pitch of the sheet, within the rounding of pitch and coil count', () => {
+  for (const r of complete) {
+    const m = model(r);
+    const p = num(r.attrs.pitch), n = num(r.attrs.coils);
+    const tol = 0.006 + (0.05 * p) / (n - 2);
+    assert.ok(Math.abs(m.activePitch - p) <= tol, `${r.sku}: drawn ${m.activePitch} vs sheet ${p}`);
+  }
+});
+
+test('unground ends are held back until the catalog convention is settled', () => {
+  const unground = comp.filter((r) => { const b = num(r.attrs.blockLength), d = num(r.attrs.d), n = num(r.attrs.coils); return b !== null && Math.abs(b - (n + 1.5) * d) < Math.abs(b - (n + 0.5) * d); });
+  assert.ok(unground.length >= 10);
+  for (const r of unground) assert.deepEqual([route(r).route, route(r).reason], ['held', 'ends-convention'], r.sku);
+  for (const r of complete) assert.equal(model(r).ground, true, r.sku);
+});
+
+test('consistency checks catch a record that breaks the relations', () => {
+  const r = recs.find((x) => x.sku === 'C.700.600.2000.I');
+  const broken = (patch) => ({ ...r, attrs: { ...r.attrs, ...patch } });
+  assert.equal(route(broken({ pitch: '25' })).route, 'review');
+  assert.equal(route(broken({ id: '50' })).route, 'review');
+  assert.equal(route(broken({ blockLength: '60' })).route, 'review');
+  assert.equal(route(r).route, 'svg');
+  assert.equal(model(r, { freeLength: '60' }).ok, false, 'a variant shorter than its block length is refused');
 });

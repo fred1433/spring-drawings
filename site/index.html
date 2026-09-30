@@ -24,28 +24,20 @@
 
 <main>
   <section class="intro">
-    <h1 data-i18n="h1">Huit de vos ressorts, dessinés à leurs propres cotes.</h1>
-    <p class="lede" data-i18n="lede">Chaque dessin vient des attributs de la fiche produit, lus sur vanel.tech le 30 septembre 2026. À gauche de chaque dessin, l'image que la fiche affiche ce jour-là.</p>
+    <h1><span class="h1-long" data-i18n="h1">Huit de vos ressorts, dessinés à leurs propres cotes.</span><span class="h1-short" data-i18n="h1Short">Vos ressorts, dessinés à leurs cotes.</span></h1>
+    <p class="lede" data-i18n="lede">Chaque dessin vient des attributs de la fiche produit, lus sur vanel.tech le 30 septembre 2026.</p>
+    <p class="synth"><span data-i18n="synth">Ressorts de compression : SVG coté + PNG catalogue. Rattachement testé sur une boutique Magento locale.</span> <a href="#try" data-i18n="editLink">Modifier une cote</a></p>
   </section>
 
   <section class="plate-wrap" aria-labelledby="plate-title">
     <h2 id="plate-title" class="visually-hidden" data-i18n="plateTitle">Planche</h2>
     <div class="plate">
-      <ol class="cells" id="cells"></ol>
-      <div class="plate-foot">
-        <p class="held" id="held"></p>
-        <table class="titleblock">
-          <tr><th colspan="2" data-i18n="tbTitle">Ressorts de compression, planche 1</th></tr>
-          <tr><td data-i18n="tbSource">Source</td><td data-i18n="tbSourceV">attributs des fiches vanel.tech, lus le 30/09/2026</td></tr>
-          <tr><td data-i18n="tbMethod">Méthode</td><td data-i18n="tbMethodV">gabarit paramétrique, aucune retouche</td></tr>
-          <tr><td data-i18n="tbLeft">À gauche</td><td data-i18n="tbLeftV">image affichée par la fiche le 30/09/2026</td></tr>
-          <tr><td data-i18n="tbKey">Couleurs</td><td><span class="key read" data-i18n="tbRead">cote lue dans la fiche</span></td></tr>
-        </table>
-      </div>
+      <div class="cols" aria-hidden="true"><span data-i18n="colNow">Image actuelle de la fiche</span><span data-i18n="colGen">Image générée</span><span data-i18n="colDraw">Dessin coté, extrémités schématiques</span></div>
+      <ol class="cells" id="cellsA"></ol>
     </div>
   </section>
 
-  <section class="try" aria-labelledby="try-title">
+  <section class="try" id="try" aria-labelledby="try-title">
     <div class="try-head">
       <h2 id="try-title" data-i18n="tryTitle">Essayez une de ces références</h2>
       <p data-i18n="tryLede">Collez une référence ou l'adresse de sa fiche : le ressort se dessine. Corrigez une cote, le dessin suit.</p>
@@ -92,11 +84,27 @@
     </div>
   </section>
 
+  <section class="plate-wrap more" aria-label="Suite de la planche">
+    <div class="plate">
+      <div class="cols" aria-hidden="true"><span data-i18n="colNow">Image actuelle de la fiche</span><span data-i18n="colGen">Image générée</span><span data-i18n="colDraw">Dessin coté, extrémités schématiques</span></div>
+      <ol class="cells" id="cellsB"></ol>
+      <div class="plate-foot">
+        <p class="held" id="held"></p>
+        <table class="titleblock">
+          <tr><th colspan="2" data-i18n="tbTitle">Ressorts de compression, planche 1</th></tr>
+          <tr><td data-i18n="tbSource">Source</td><td data-i18n="tbSourceV">attributs des fiches vanel.tech, lus le 30/09/2026</td></tr>
+          <tr><td data-i18n="tbMethod">Méthode</td><td data-i18n="tbMethodV">gabarit paramétrique, aucune retouche</td></tr>
+          <tr><td data-i18n="tbKey">Couleurs</td><td><span class="key read" data-i18n="tbRead">cote lue dans la fiche</span></td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
   <section class="how" aria-labelledby="how-title">
     <h2 id="how-title" data-i18n="howTitle">Ce que la chaîne fait déjà, et ce qui reste à brancher</h2>
     <div class="how-body" id="howBody"></div>
     <figure class="proof">
-      <img src="magento-test-store.jpg" alt="" width="900" height="360" loading="lazy">
+      <img src="magento-test-store.jpg" alt="" width="1127" height="262" loading="lazy">
       <figcaption data-i18n="proofCap">La page produit de la boutique de test, avec l'image générée rattachée au SKU.</figcaption>
     </figure>
   </section>
