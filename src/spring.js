@@ -18,6 +18,8 @@
 export const INK = '#1d2126';
 export const READ = '#1c4f9c';
 export const EDITED = '#9a5b00';
+const FRONT = '#eef1f3'; // wire seen in front
+const BACK = '#c4cbd1';  // wire seen through the gaps, behind
 
 const TXT = {
   fr: {
@@ -177,7 +179,7 @@ const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 const poly = (pp) => pp.map((p, i) => `${i ? 'L' : 'M'}${f2(p[0])} ${f2(p[1])}`).join('');
 
 // Wire as an outlined tube: dark band at wire width, white core; back half first so the front hides it.
-function coilPaths(m, P, wpx, lw, shade = false) {
+function coilPaths(m, P, wpx, lw, shade = true) {
   const pts = centerline(m);
   const rs = runs(pts);
   const seg = (r, pad) => pts.slice(Math.max(0, r.from - pad), Math.min(pts.length, r.to + 1 + pad)).map((p) => P(p.x, p.y));
@@ -185,18 +187,18 @@ function coilPaths(m, P, wpx, lw, shade = false) {
   const front = rs.filter((r) => r.front).map((r) => poly(seg(r, 1))).join('');
   const band = (d, w, c) => `<path d="${d}" fill="none" stroke="${c}" stroke-width="${f2(w)}" stroke-linecap="round" stroke-linejoin="round"/>`;
   if (wpx <= 3.2 * lw) return band(back, Math.max(wpx, lw), INK) + band(front, Math.max(wpx, lw), INK);
-  return band(back, wpx, INK) + band(back, wpx - 2 * lw, shade ? '#d5dade' : '#fff') + band(front, wpx, INK) + band(front, wpx - 2 * lw, shade ? '#f4f5f6' : '#fff');
+  return band(back, wpx, INK) + band(back, wpx - 2 * lw, shade ? BACK : '#fff') + band(front, wpx, INK) + band(front, wpx - 2 * lw, shade ? FRONT : '#fff');
 }
 
-function sideView(m, box, lw, shade = false, kind = 'v') {
+function sideView(m, box, lw, shade = true, kind = 'v', sFixed = null, alignLeft = false) {
   const { d, od, freeLength: L } = m.v;
-  const s = Math.min(box.w / L, box.h / od);
-  const cx = box.x + (box.w - L * s) / 2, cy = box.y + box.h / 2;
+  const s = sFixed || Math.min(box.w / L, box.h / od);
+  const cx = alignLeft ? box.x : box.x + (box.w - L * s) / 2, cy = box.y + box.h / 2;
   const P = (x, y) => [cx + x * s, cy - y * s];
   const top = cy - (od / 2) * s, bot = cy + (od / 2) * s;
   const x0 = cx, x1 = cx + L * s;
   const id = `clip-${m.rec.sku.replace(/[^A-Za-z0-9]/g, '')}-${kind}${m.variant ? '-var' : ''}`;
-  let svg = `<clipPath id="${id}"><rect x="${f2(x0)}" y="${f2(top - lw * 2)}" width="${f2(x1 - x0)}" height="${f2(bot - top + lw * 4)}"/></clipPath>`;
+  let svg = `<g class="side" data-scale="${f2(s * 1000) / 1000}"></g><clipPath id="${id}"><rect x="${f2(x0)}" y="${f2(top - lw * 2)}" width="${f2(x1 - x0)}" height="${f2(bot - top + lw * 4)}"/></clipPath>`;
   svg += `<g clip-path="url(#${id})">${coilPaths(m, P, d * s, lw, shade)}</g>`;
   if (m.ground) svg += `<path d="M${f2(x0)} ${f2(top)}V${f2(bot)}M${f2(x1)} ${f2(top)}V${f2(bot)}" stroke="${INK}" stroke-width="${lw}"/>`;
   return { svg, s, P, cy, top, bot, x0, x1 };
@@ -204,8 +206,9 @@ function sideView(m, box, lw, shade = false, kind = 'v') {
 
 function endView(m, cx, cy, r, lw) {
   const ro = r, ri = r * (m.v.od / 2 - m.v.d) / (m.v.od / 2);
-  const svg = `<circle cx="${f2(cx)}" cy="${f2(cy)}" r="${f2(ro)}" fill="#fff" stroke="${INK}" stroke-width="${lw}"/>` +
-    `<circle cx="${f2(cx)}" cy="${f2(cy)}" r="${f2(ri)}" fill="none" stroke="${INK}" stroke-width="${lw}"/>` +
+  const ring = `M${f2(cx - ro)} ${f2(cy)}a${f2(ro)} ${f2(ro)} 0 1 0 ${f2(2 * ro)} 0a${f2(ro)} ${f2(ro)} 0 1 0 ${f2(-2 * ro)} 0ZM${f2(cx - ri)} ${f2(cy)}a${f2(ri)} ${f2(ri)} 0 1 0 ${f2(2 * ri)} 0a${f2(ri)} ${f2(ri)} 0 1 0 ${f2(-2 * ri)} 0Z`;
+  const svg = `<path class="ring" d="${ring}" fill="${FRONT}" fill-rule="evenodd"/><circle class="ro" cx="${f2(cx)}" cy="${f2(cy)}" r="${f2(ro)}" fill="none" stroke="${INK}" stroke-width="${lw}"/>` +
+    `<circle class="ri" cx="${f2(cx)}" cy="${f2(cy)}" r="${f2(ri)}" fill="none" stroke="${INK}" stroke-width="${lw}"/>` +
     `<path d="M${f2(cx)} ${f2(cy - ri)}V${f2(cy - ro)}" stroke="${INK}" stroke-width="${lw}"/>`;
   return { svg, ro, ri };
 }
@@ -261,6 +264,32 @@ export function drawPlate(rec, lang = 'fr', overrides = {}) {
   b += vDim(sv.top, sv.bot, sv.x1, sv.x1 + 20, `${T.od} ${mm(m, 'od', lang)}`, S, col(m, 'od'));
   const wl = wireLeader(m, sv, S, H - 14);
   b += leader(wl.x, wl.y, wl.x + 26, wl.ty, `${T.wire} ${mm(m, 'd', lang)}`, S, col(m, 'd'));
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(`${T.family} ${rec.sku}`)}">${STYLE}<rect width="${W}" height="${H}" fill="#fff"/>${b}</svg>`;
+  return { svg, model: m };
+}
+
+// Catalog row: end view and side view at the same scale, free length, OD, ID and wire.
+export function drawPlateWide(rec, lang = 'fr', overrides = {}) {
+  const m = model(rec, overrides);
+  const W = 1000, H = 250;
+  const S = { thin: 1, arrow: 8, font: 18, gap: 8 };
+  const T = txt(lang);
+  if (!m.ok) return { svg: '', model: m };
+  const { od, freeLength: L } = m.v;
+  const s = Math.min(560 / L, 150 / od);
+  const ecx = 110, ecy = 128;
+  const ev = endView(m, ecx, ecy, (od / 2) * s, 1.6);
+  let b = ev.svg;
+  const idCol = m.idCalc ? (m.variant ? EDITED : '#5b636b') : READ;
+  b += hDim(ecx - ev.ri, ecx + ev.ri, ecy - ev.ri * 0.3, ecy - ev.ro - 18, `${T.id} ${fmt(m.idValue, lang)} mm${m.idCalc ? ` (${T.calc})` : ''}`, S, idCol);
+  const sv = sideView(m, { x: 250, y: 53, w: 560, h: 150 }, 1.6, true, 'row', s, true);
+  b += sv.svg;
+  b += hDim(sv.x0, sv.x1, sv.top, Math.min(sv.top - 18, 44), mm(m, 'freeLength', lang), S, col(m, 'freeLength'));
+  b += vDim(sv.top, sv.bot, sv.x1, sv.x1 + 22, `${T.od} ${mm(m, 'od', lang)}`, S, col(m, 'od'));
+  // wire: under the ring, pointing at the wall where its thickness reads directly
+  const wy = ecy + (ev.ro + ev.ri) / 2, ty = ecy + ev.ro + 30;
+  b += `<path d="M${f2(ecx)} ${f2(ty - S.font + 2)}V${f2(wy + 2)}" stroke="${col(m, 'd')}" stroke-width="${S.thin}"/>` + arrow(ecx, wy, -Math.PI / 2, S.arrow, col(m, 'd'));
+  b += text(ecx, ty, `${T.wire} ${mm(m, 'd', lang)}`, S.font, col(m, 'd'));
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(`${T.family} ${rec.sku}`)}">${STYLE}<rect width="${W}" height="${H}" fill="#fff"/>${b}</svg>`;
   return { svg, model: m };
 }

@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { model, route, drawSheet, drawPlate, catalogImage, envelope, centerline, findRecord, num, READ, EDITED } from '../src/spring.js';
+import { model, route, drawSheet, drawPlate, drawPlateWide, catalogImage, envelope, centerline, findRecord, num, READ, EDITED } from '../src/spring.js';
 
 const recs = JSON.parse(readFileSync(new URL('../data/springs.json', import.meta.url)));
 const comp = recs.filter((r) => r.family === 'compression');
@@ -115,5 +115,33 @@ test('every record keeps the URL it was read from and the date', () => {
   for (const r of recs) {
     assert.match(r.categoryUrl, /^https:\/\/www\.vanel\.tech\//);
     assert.match(r.readAt, /^\d{4}-\d{2}-\d{2}$/);
+  }
+});
+
+test('the wire is drawn at its true thickness, at the scale of the drawing, in side and end views', () => {
+  for (const r of complete) {
+    for (const draw of [drawPlateWide, drawSheet, drawPlate]) {
+      const { svg, model: m } = draw(r, 'fr');
+      const scale = Number(svg.match(/class="side" data-scale="([\d.]+)"/)[1]);
+      const bands = [...svg.matchAll(/<path d="[^"]+" fill="none" stroke="#1d2126" stroke-width="([\d.]+)" stroke-linecap="round"/g)].map((x) => Number(x[1]));
+      assert.ok(bands.length >= 2, `${r.sku}: no wire band`);
+      const expected = Math.max(m.v.d * scale, 1.6);
+      for (const w of bands) assert.ok(Math.abs(w - expected) <= 0.02 * expected + 0.01, `${r.sku} ${draw.name}: wire ${w}px, expected ${expected}px`);
+      const ro = svg.match(/class="ro" cx="[^"]+" cy="[^"]+" r="([\d.]+)"/);
+      const ri = svg.match(/class="ri" cx="[^"]+" cy="[^"]+" r="([\d.]+)"/);
+      if (ro && ri) {
+        const t = (Number(ro[1]) - Number(ri[1])) / (2 * Number(ro[1]));
+        assert.ok(Math.abs(t - m.v.d / m.v.od) < 0.002, `${r.sku}: ring wall ${t} vs ${m.v.d / m.v.od}`);
+      }
+    }
+  }
+});
+
+test('in a catalog row, end view and side view share one scale', () => {
+  for (const r of complete) {
+    const { svg, model: m } = drawPlateWide(r, 'fr');
+    const scale = Number(svg.match(/data-scale="([\d.]+)"/)[1]);
+    const ro = Number(svg.match(/class="ro" cx="[^"]+" cy="[^"]+" r="([\d.]+)"/)[1]);
+    assert.ok(Math.abs(2 * ro - m.v.od * scale) <= 0.01 * m.v.od * scale + 0.02, r.sku);
   }
 });

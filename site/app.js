@@ -1,4 +1,4 @@
-import { drawPlate, drawSheet, catalogImage, model, route, findRecord, fmt, num } from './spring.js';
+import { drawPlate, drawPlateWide, drawSheet, catalogImage, model, route, findRecord, fmt, num } from './spring.js';
 
 const PLATE = ['C.692.560.0500.I', 'C.248.320.0224.A', 'C.980.550.1000.I', 'C.700.600.1200.I', 'C.371.320.1020.AP', 'C.700.600.2000.I', 'C.180.300.0780.A', 'C.600.600.3600.I'];
 const DEFAULT_REF = 'C.700.600.2000.I';
@@ -8,7 +8,7 @@ const I18N = {
     title: 'Ressorts dessinés à leurs cotes',
     where: "Planche d'essai pour vanel.tech",
     h1: 'Huit de vos ressorts, dessinés à leurs propres cotes.',
-    lede: "Chaque dessin vient des seuls attributs de la fiche produit, lus sur vanel.tech le 30 septembre 2026. À gauche de chaque dessin, l'image que la fiche affichait ce jour-là.",
+    lede: "Chaque dessin vient des attributs de la fiche produit, lus sur vanel.tech le 30 septembre 2026. À gauche de chaque dessin, l'image que la fiche affichait ce jour-là.",
     plateTitle: 'Planche',
     now: 'image de la fiche, 30/09/2026',
     tbTitle: 'Ressorts de compression, planche 1',
@@ -51,7 +51,7 @@ const I18N = {
     title: 'Springs drawn to their dimensions',
     where: 'Test plate for vanel.tech',
     h1: 'Eight of your springs, drawn to their own dimensions.',
-    lede: 'Each drawing comes from the product sheet attributes alone, read on vanel.tech on September 30, 2026. Left of each drawing, the image the sheet showed that day.',
+    lede: 'Each drawing comes from the product sheet attributes, read on vanel.tech on September 30, 2026. Left of each drawing, the image the sheet showed that day.',
     plateTitle: 'Plate',
     now: 'image on the sheet, 2026-09-30',
     tbTitle: 'Compression springs, plate 1',
@@ -129,7 +129,7 @@ function renderPlate() {
     li.className = 'cell';
     const mat = L().material[r.attrs.material] || r.attrs.material || '';
     const img = r.currentImage ? `<figure class="now"><img src="current/${r.currentImage.file}" alt="${lang === 'fr' ? 'Image affichée par la fiche' : 'Image shown on the sheet'} ${sku}" loading="lazy"></figure>` : '<div></div>';
-    li.innerHTML = `<div class="cell-head"><span class="sku">${sku}</span><span class="mat">${mat}</span></div>${img}<div class="drawn">${drawPlate(r, lang).svg}</div>`;
+    li.innerHTML = `<div class="cell-head"><span class="sku">${sku}</span><span class="mat">${mat}</span></div>${img}<div class="drawn wide">${drawPlateWide(r, lang).svg}</div><div class="drawn compact">${drawPlate(r, lang).svg}</div>`;
     cells.appendChild(li);
   }
   animatePlate();
