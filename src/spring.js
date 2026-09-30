@@ -59,51 +59,72 @@ export const REQUIRED = ['d', 'od', 'freeLength', 'coils', 'pitch'];
 export const EDITABLE = ['d', 'od', 'freeLength', 'coils'];
 
 // Where a record goes: drawn by the template, held back for a missing value, or not handled by this template.
+// Ends of the spring, from the record as read (never from a visitor's changes):
+// the block length the sheet gives, (coils + 0.5) x wire when ground, (coils + 1.5) x wire when not.
+export function endsOf(rec) {
+  const d = num(rec.attrs.d), n = num(rec.attrs.coils), b = num(rec.attrs.blockLength);
+  if (b !== null && d !== null && n !== null) {
+    const g = Math.abs(b - (n + 0.5) * d), ng = Math.abs(b - (n + 1.5) * d);
+    return { ground: g < ng, from: 'block' };
+  }
+  if (/^(yes|no)$/i.test(rec.attrs.grinding || '')) return { ground: /^yes$/i.test(rec.attrs.grinding), from: 'grinding' };
+  return null;
+}
+
+// Where a record goes: drawn by the template, held back for a missing value, or not handled by this template.
 export function route(rec) {
   if (rec.family !== 'compression') return { route: 'unsupported', reason: 'family' };
   const missing = REQUIRED.filter((k) => num(rec.attrs[k]) === null);
-  if (missing.length) return { route: 'held', reason: 'missing', fields: missing };
+  if (!endsOf(rec)) missing.push('blockLength');
+  if (missing.length) return { route: 'held', reason: 'missing', fields: missing, productPageRead: !!rec.productPageRead };
   const m = model(rec);
   if (!m.ok) return { route: 'review', reason: m.reason };
   return { route: 'svg' };
+}
+
+// What a visitor may type: a plain decimal number (comma or point), within plausible bounds.
+export const BOUNDS = { d: [0.05, 30], od: [0.5, 600], freeLength: [0.5, 3000], coils: [2.5, 150] };
+export function parseInput(k, s) {
+  const t = String(s ?? '').trim();
+  if (!/^\d+([.,]\d+)?$/.test(t)) return { ok: false, reason: 'format' };
+  const v = Number(t.replace(',', '.'));
+  const [lo, hi] = BOUNDS[k];
+  if (!(v >= lo && v <= hi)) return { ok: false, reason: 'bounds', lo, hi };
+  return { ok: true, value: v };
 }
 
 // Turn a record into a drawing model. `overrides` are values typed by a visitor (hypothetical variant).
 export function model(rec, overrides = {}) {
   const raw = { ...rec.attrs };
   const edited = {};
+  const badInput = [];
   for (const k of EDITABLE) {
     const o = overrides[k];
-    if (o === undefined || o === null || String(o).trim() === '') continue;
-    if (num(o) !== null && num(o) !== num(raw[k])) { raw[k] = String(o).trim(); edited[k] = true; }
+    if (o === undefined || o === null) continue;
+    if (String(o).trim() === '') { badInput.push({ field: k, reason: 'empty' }); continue; }
+    const p = parseInput(k, o);
+    if (!p.ok) { badInput.push({ field: k, ...p }); continue; }
+    if (p.value !== num(raw[k])) { raw[k] = String(p.value); edited[k] = true; }
   }
   const v = {};
   for (const [k, s] of Object.entries(raw)) v[k] = num(s);
   const m = { rec, raw, v, edited, variant: Object.keys(edited).length > 0, ok: true, sources: [] };
+  if (badInput.length) return { ...m, ok: false, reason: 'input', badInput };
   const missing = REQUIRED.filter((k) => v[k] === null);
   if (missing.length) return { ...m, ok: false, reason: 'missing', missing };
   if (!(v.d > 0 && v.od > 2 * v.d && v.freeLength > 2 * v.d && v.coils > 2)) return { ...m, ok: false, reason: 'geometry' };
 
   m.rm = (v.od - v.d) / 2;
   m.hand = 1;
-  // ground ends from the block length relation, only when the block length is on the sheet
-  if (v.blockLength !== null && v.blockLength !== undefined && !edited.d && !edited.coils) {
-    const g = Math.abs(v.blockLength - (v.coils + 0.5) * v.d);
-    const ng = Math.abs(v.blockLength - (v.coils + 1.5) * v.d);
-    m.ground = g < ng;
-    m.groundFrom = 'block';
-  } else if (/^(yes|no)$/i.test(raw.grinding || '')) {
-    m.ground = /^yes$/i.test(raw.grinding);
-    m.groundFrom = 'grinding';
-  } else {
-    m.ground = false;
-    m.groundFrom = 'unknown';
-  }
+  // ends are a property of the product, read once from the record as read, and kept in a variant
+  const ends = endsOf(rec);
+  if (!ends) return { ...m, ok: false, reason: 'missing', missing: ['blockLength'] };
+  m.ground = ends.ground;
+  m.groundFrom = ends.from;
   // the pitch the drawing uses: the one that closes the free length with one closed coil at each end
   const span = m.ground ? v.freeLength : v.freeLength - v.d;
   m.activePitch = (span - 2 * v.d) / (v.coils - 2);
   if (!(m.activePitch > v.d)) return { ...m, ok: false, reason: 'geometry' };
-  m.pitchMatchesSheet = !m.variant && Math.abs((v.coils - 2) * v.pitch + 2 * v.d - v.freeLength) <= 0.01 * v.freeLength;
   // inside diameter: read on the sheet unless the visitor changed wire or OD, then calculated
   if (!edited.d && !edited.od && v.id !== null && v.id !== undefined) { m.idValue = raw.id; m.idCalc = false; }
   else { m.idValue = String(Math.round((v.od - 2 * v.d) * 100) / 100); m.idCalc = true; }
@@ -313,18 +334,20 @@ export function drawSheet(rec, lang = 'fr', overrides = {}) {
   if (!m.ok) return { svg: '', model: m };
   let b = `<rect x="10" y="10" width="${W - 20}" height="${H - 20}" fill="none" stroke="${INK}" stroke-width="1.2"/>`;
   // end view
-  const ecx = 215, ecy = 270, er = 118;
+  // one scale for both views
+  const sc = Math.min(440 / m.v.freeLength, 230 / m.v.od);
+  const ecx = 215, ecy = 265, er = (m.v.od / 2) * sc;
   const ev = endView(m, ecx, ecy, er, 1.6);
   b += ev.svg;
   const idCol = m.idCalc ? (m.variant ? EDITED : '#5b636b') : READ;
   const idLabel = `${T.id} ${fmt(m.idValue, lang)} mm${m.idCalc ? ` (${T.calc})` : ''}`;
-  b += hDim(ecx - ev.ri, ecx + ev.ri, ecy - ev.ri * 0.2, ecy - er - 30, idLabel, S, idCol);
+  b += hDim(ecx - ev.ri, ecx + ev.ri, ecy - ev.ri * 0.2, ecy - er - 26, idLabel, S, idCol);
   const yOd = ecy + er + 36;
   b += `<path d="M${f2(ecx - ev.ro)} ${f2(ecy + 4)}V${f2(yOd + 5)}M${f2(ecx + ev.ro)} ${f2(ecy + 4)}V${f2(yOd + 5)}M${f2(ecx - ev.ro)} ${f2(yOd)}H${f2(ecx + ev.ro)}" stroke="${col(m, 'od')}" stroke-width="${S.thin}" fill="none"/>`;
   b += arrow(ecx - ev.ro, yOd, Math.PI, S.arrow, col(m, 'od')) + arrow(ecx + ev.ro, yOd, 0, S.arrow, col(m, 'od'));
   b += text(ecx, yOd + S.font + 8, `${T.od} ${mm(m, 'od', lang)}`, S.font, col(m, 'od'));
   // side view
-  const sv = sideView(m, { x: 470, y: 150, w: 440, h: 230 }, 1.6, false, 'sheet');
+  const sv = sideView(m, { x: 470, y: 150, w: 440, h: 230 }, 1.6, true, 'sheet', sc);
   b += sv.svg;
   b += hDim(sv.x0, sv.x1, sv.top, Math.min(sv.top - 28, 120), mm(m, 'freeLength', lang), S, col(m, 'freeLength'));
   const wl = wireLeader(m, sv, S, 450);

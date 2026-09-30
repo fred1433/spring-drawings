@@ -37,11 +37,13 @@ for (const [i, sku] of SKUS.entries()) {
   try { await mg.call('DELETE', `/products/${encodeURIComponent(sku)}`); } catch { /* not there yet */ }
   await mg.call('POST', '/products', {
     product: {
-      sku, name: `Test ${sku}`, attribute_set_id: 4, price: 1, status: 1, visibility: 4, type_id: 'simple', weight: 1,
+      sku, name: i === 0 ? 'Compression spring C.700.600.2000.I' : `Test ${sku}`, attribute_set_id: 4, price: 1, status: 1, visibility: 4, type_id: 'simple', weight: 1,
       extension_attributes: { website_ids: [1], stock_item: { qty: 10, is_in_stock: true } },
       custom_attributes: [{ attribute_code: 'url_key', value: `test-spring-${i}-${Date.now()}` }],
     },
   });
+  // stock through the inventory sources (MSI), so the storefront shows the product in stock
+  try { await mg.call('POST', '/inventory/source-items', { sourceItems: [{ sku, source_code: 'default', quantity: 10, status: 1 }] }); } catch (e) { note('stock', { sku, error: e.message }); }
   if (i < 2) {
     await mg.call('POST', `/products/${encodeURIComponent(sku)}/media`, {
       entry: { media_type: 'image', label: 'placeholder', position: 1, disabled: false, types: ['image', 'small_image', 'thumbnail'],
@@ -103,6 +105,11 @@ const media4 = await mg.media(sku);
 note('rollback', { action: r.action, entries: media4.map((e) => ({ id: e.id, file: e.file, types: e.types })) });
 assert(!media4.some(isManaged), 'managed image removed');
 assert(media4.some((e) => (e.types || []).includes('image')), 'placeholder has its role back');
+
+// leave the store in the published state, so the storefront page can be looked at
+const jFinal = await mg.upsertManagedImage(sku, png1, { label: 'Compression spring C.700.600.2000.I' });
+const pageFinal = await (await fetch(`${BASE}/${urlKey}.html`)).text();
+note('final', { action: jFinal.action, url: `${BASE}/${urlKey}.html`, showsManagedImage: pageFinal.includes(mine.file.split('/').pop().replace('.png', '').slice(0, 30)), inStock: /In stock/i.test(pageFinal) });
 
 writeFileSync(new URL('./live-check-result.json', import.meta.url), JSON.stringify({ ranAt: new Date().toISOString(), log }, null, 1));
 console.log('ALL CHECKS PASSED');

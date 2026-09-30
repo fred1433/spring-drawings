@@ -173,3 +173,5 @@ figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; ali
   .try, .how { padding-top: 64px; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+.dl:disabled { opacity: .35; cursor: not-allowed; }
+.dims input[aria-invalid="true"] { border-color: #8a2d1c; color: #8a2d1c; background: #fff6f4; }

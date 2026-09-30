@@ -20,7 +20,17 @@
    "legPosition": null,
    "pitch": "5.3",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "33.99",
+   "blockLength": "29.7",
+   "grinding": "1"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -49,6 +59,8 @@
    "blockLength": "51.3",
    "grinding": "1"
   },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
   "currentImage": {
    "file": "compression_product.jpg",
    "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
@@ -81,6 +93,8 @@
    "blockLength": "16.96",
    "grinding": "1"
   },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
   "currentImage": {
    "file": "compression_product.jpg",
    "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
@@ -113,6 +127,8 @@
    "blockLength": "24.32",
    "grinding": "1"
   },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
   "currentImage": {
    "file": "compression_product.jpg",
    "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
@@ -142,6 +158,8 @@
    "grinding": "0",
    "material": "Stainless Steel"
   },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
   "currentImage": {
    "file": "compression_product.jpg",
    "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
@@ -170,7 +188,8 @@
    "blockLength": "55.5",
    "grinding": "1",
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.620.450.0800.I",
@@ -194,7 +213,8 @@
    "blockLength": "25.65",
    "grinding": "1",
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.620.500.0800.I",
@@ -218,7 +238,8 @@
    "blockLength": "30",
    "grinding": "1",
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.620.550.0800.I",
@@ -242,7 +263,8 @@
    "blockLength": "34.65",
    "grinding": "1",
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.640.600.0800.I",
@@ -266,7 +288,8 @@
    "blockLength": "37.79",
    "grinding": "1",
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.660.300.0800.A",
@@ -289,7 +312,17 @@
    "legPosition": null,
    "pitch": "36.99",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "21.06",
+   "blockLength": "16.5",
+   "grinding": "0"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -313,7 +346,17 @@
    "legPosition": null,
    "pitch": "38.47",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "59.1",
+   "blockLength": "38.09",
+   "grinding": "0"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -337,7 +380,17 @@
    "legPosition": null,
    "pitch": "33.53",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "14.97",
+   "blockLength": "12.16",
+   "grinding": "1"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -361,7 +414,17 @@
    "legPosition": null,
    "pitch": "35.9",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "36.99",
+   "blockLength": "25.28",
+   "grinding": "1"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -385,7 +448,17 @@
    "legPosition": null,
    "pitch": "31.49",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "75.12",
+   "blockLength": "52.92",
+   "grinding": "0"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -409,7 +482,17 @@
    "legPosition": null,
    "pitch": "27.69",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "25.17",
+   "blockLength": "20.39",
+   "grinding": "1"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -433,7 +516,17 @@
    "legPosition": null,
    "pitch": "27.93",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "87.6",
+   "blockLength": "64.4",
+   "grinding": "0"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -458,7 +551,8 @@
    "blockLength": "24.2",
    "grinding": "1",
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.660.600.0800.I",
@@ -482,7 +576,8 @@
    "blockLength": "36.59",
    "grinding": "1",
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.680.300.1000.A",
@@ -505,7 +600,17 @@
    "legPosition": null,
    "pitch": "40.86",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "22.93",
+   "blockLength": "17.39",
+   "grinding": "0"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -529,7 +634,17 @@
    "legPosition": null,
    "pitch": "40.52",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "31.06",
+   "blockLength": "21.9",
+   "grinding": "0"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -553,7 +668,17 @@
    "legPosition": null,
    "pitch": "36.79",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "22.17",
+   "blockLength": "17.6",
+   "grinding": "0"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -577,7 +702,17 @@
    "legPosition": null,
    "pitch": "37.06",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "28.76",
+   "blockLength": "21.44",
+   "grinding": "0"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -602,7 +737,8 @@
    "pitch": "38.02",
    "material": "Music Wire",
    "rotation": null
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.680.360.0500.A",
@@ -625,7 +761,17 @@
    "legPosition": null,
    "pitch": "32.92",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "16.39",
+   "blockLength": "13.68",
+   "grinding": "1"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -649,7 +795,17 @@
    "legPosition": null,
    "pitch": "33.09",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "21.51",
+   "blockLength": "16.92",
+   "grinding": "1"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -673,7 +829,17 @@
    "legPosition": null,
    "pitch": "29.67",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "28.4",
+   "blockLength": "22.4",
+   "grinding": "1"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -697,7 +863,17 @@
    "legPosition": null,
    "pitch": "29.23",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "40.86",
+   "blockLength": "30.8",
+   "grinding": "1"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -722,7 +898,8 @@
    "blockLength": "37.35",
    "grinding": "1",
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.680.500.1200.I",
@@ -746,7 +923,8 @@
    "blockLength": "30",
    "grinding": "1",
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.680.500.1800.I",
@@ -770,7 +948,8 @@
    "blockLength": "40",
    "grinding": "1",
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.680.500.3600.I",
@@ -794,7 +973,8 @@
    "blockLength": "91.5",
    "grinding": null,
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.680.500.3950.I",
@@ -818,7 +998,8 @@
    "blockLength": "75",
    "grinding": "1",
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.680.550.1600.I",
@@ -842,7 +1023,8 @@
    "blockLength": "51.7",
    "grinding": "1",
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.680.550.2000.I",
@@ -866,7 +1048,8 @@
    "blockLength": "61.59",
    "grinding": "1",
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.680.600.3600.I",
@@ -890,7 +1073,8 @@
    "blockLength": "124.8",
    "grinding": null,
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.690.560.1000.I",
@@ -914,7 +1098,8 @@
    "blockLength": "36.95",
    "grinding": "1",
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.690.560.2960.I",
@@ -938,7 +1123,8 @@
    "blockLength": "117.6",
    "grinding": "1",
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.692.560.0500.I",
@@ -963,6 +1149,8 @@
    "grinding": "1",
    "material": "Stainless Steel"
   },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
   "currentImage": {
    "file": "compression_product.jpg",
    "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
@@ -991,7 +1179,8 @@
    "blockLength": "31.92",
    "grinding": "1",
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.692.560.2000.I",
@@ -1015,7 +1204,8 @@
    "blockLength": "48.16",
    "grinding": "1",
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.700.320.0800.A",
@@ -1038,7 +1228,17 @@
    "legPosition": null,
    "pitch": "38.73",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "21.86",
+   "blockLength": "17.28",
+   "grinding": "0"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -1062,7 +1262,17 @@
    "legPosition": null,
    "pitch": "38.99",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "24.66",
+   "blockLength": "18.88",
+   "grinding": "0"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -1086,7 +1296,17 @@
    "legPosition": null,
    "pitch": "39.53",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "28.03",
+   "blockLength": "20.8",
+   "grinding": "0"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -1110,7 +1330,17 @@
    "legPosition": null,
    "pitch": "34.72",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "34.5",
+   "blockLength": "24.84",
+   "grinding": "1"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -1134,7 +1364,17 @@
    "legPosition": null,
    "pitch": "39.14",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "31.11",
+   "blockLength": "24",
+   "grinding": "1"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -1158,7 +1398,17 @@
    "legPosition": null,
    "pitch": "31.32",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "73.95",
+   "blockLength": "52.4",
+   "grinding": "1"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -1183,7 +1433,8 @@
    "blockLength": "29.7",
    "grinding": "1",
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.700.500.2800.I",
@@ -1207,7 +1458,8 @@
    "blockLength": "67",
    "grinding": "1",
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.700.500.3600.I",
@@ -1231,7 +1483,8 @@
    "blockLength": "88",
    "grinding": null,
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.700.550.3600.I",
@@ -1255,7 +1508,8 @@
    "blockLength": "103.4",
    "grinding": null,
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.700.600.0600.I",
@@ -1279,7 +1533,8 @@
    "blockLength": "28.79",
    "grinding": "1",
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.700.600.1200.I",
@@ -1304,6 +1559,8 @@
    "grinding": "1",
    "material": "Stainless Steel"
   },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
   "currentImage": {
    "file": "compression_product.jpg",
    "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
@@ -1333,6 +1590,8 @@
    "grinding": "1",
    "material": "Stainless Steel"
   },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
   "currentImage": {
    "file": "compression_product.jpg",
    "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
@@ -1360,7 +1619,17 @@
    "legPosition": null,
    "pitch": "39.99",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "16.74",
+   "blockLength": "13.8",
+   "grinding": "0"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -1384,7 +1653,17 @@
    "legPosition": null,
    "pitch": "42.54",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "23.82",
+   "blockLength": "18.24",
+   "grinding": "0"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -1408,7 +1687,17 @@
    "legPosition": null,
    "pitch": "35.66",
    "material": "Music Wire",
-   "rotation": null
+   "rotation": null,
+   "lengthAtMaxLoad": "16.09",
+   "blockLength": "13.32",
+   "grinding": "1"
+  },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
+  "currentImage": {
+   "file": "compression_product.jpg",
+   "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_product.jpg",
+   "readAt": "2026-09-30"
   }
  },
  {
@@ -1433,7 +1722,8 @@
    "blockLength": "28.5",
    "grinding": "1",
    "material": "Stainless Steel"
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "C.980.550.1000.I",
@@ -1458,6 +1748,8 @@
    "grinding": "1",
    "material": "Stainless Steel"
   },
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
   "currentImage": {
    "file": "compression_spring_537.png",
    "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/c/o/compression_spring_537.png",
@@ -1486,7 +1778,8 @@
    "pitch": null,
    "material": "Piano Wire",
    "rotation": null
-  }
+  },
+  "productPageRead": false
  },
  {
   "sku": "U.060.100.0614.AX",
@@ -1511,7 +1804,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.061.085.0572.AX",
@@ -1536,7 +1830,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.061.085.1016.IX",
@@ -1562,6 +1857,8 @@
    "hooks": "2"
   },
   "hookType": "german",
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
   "currentImage": {
    "file": "german_127.png",
    "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/g/e/german_127.png",
@@ -1591,7 +1888,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.083.130.0350.AX",
@@ -1616,7 +1914,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.084.140.0500.AX",
@@ -1641,7 +1940,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.090.125.0889.IX",
@@ -1666,7 +1966,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.091.085.0444.AX",
@@ -1691,7 +1992,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.092.110.0410.IX",
@@ -1716,7 +2018,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.092.140.0350.IX",
@@ -1741,7 +2044,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.092.150.0250.IX",
@@ -1766,7 +2070,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.092.150.1270.IX",
@@ -1791,7 +2096,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.095.130.0700.A",
@@ -1816,7 +2122,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.112.125.0827.A",
@@ -1841,7 +2148,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.127.120.0640.AX",
@@ -1866,7 +2174,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.127.125.0963.AX",
@@ -1891,7 +2200,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.127.175.0570.A",
@@ -1916,7 +2226,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.130.100.0592.A",
@@ -1941,7 +2252,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.130.120.0410.I",
@@ -1966,7 +2278,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.159.175.0570.I",
@@ -1991,7 +2304,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.160.180.0800.A",
@@ -2017,6 +2331,8 @@
    "hooks": "2"
   },
   "hookType": "german",
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
   "currentImage": {
    "file": "german_127.png",
    "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/g/e/german_127.png",
@@ -2046,7 +2362,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.165.175.0381.A",
@@ -2071,7 +2388,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.190.160.0444.I",
@@ -2096,7 +2414,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.190.175.0700.A",
@@ -2121,7 +2440,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.191.125.0890.I",
@@ -2146,7 +2466,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.200.140.0980.AX",
@@ -2171,7 +2492,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.200.180.1000.AX",
@@ -2196,7 +2518,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.210.140.0762.AX",
@@ -2221,7 +2544,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "U.210.140.2150.A",
@@ -2246,7 +2570,8 @@
    "id": null,
    "hooks": "2"
   },
-  "hookType": "german"
+  "hookType": "german",
+  "productPageRead": false
  },
  {
   "sku": "D.150.250.0450",
@@ -2272,7 +2597,8 @@
    "material": "Stainless Steel",
    "rotation": "2"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "D.150.250.1075",
@@ -2298,7 +2624,8 @@
    "material": "Stainless Steel",
    "rotation": "2"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "D.180.300.1075",
@@ -2324,7 +2651,8 @@
    "material": "Stainless Steel",
    "rotation": "2"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "D.182.220.0425",
@@ -2350,7 +2678,8 @@
    "material": "Stainless Steel",
    "rotation": "2"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "D.246.360.0325",
@@ -2376,7 +2705,8 @@
    "material": "Stainless Steel",
    "rotation": "2"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "D.250.280.0525",
@@ -2403,6 +2733,8 @@
    "rotation": "2"
   },
   "windingFromCategory": "right",
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
   "currentImage": {
    "file": "torsion_16.png",
    "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/t/o/torsion_16.png",
@@ -2433,7 +2765,8 @@
    "material": "Stainless Steel",
    "rotation": "2"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "D.255.400.0700",
@@ -2459,7 +2792,8 @@
    "material": "Stainless Steel",
    "rotation": "2"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "D.275.250.0825",
@@ -2485,7 +2819,8 @@
    "material": "Stainless Steel",
    "rotation": "2"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "D.305.400.0825",
@@ -2511,7 +2846,8 @@
    "material": "Stainless Steel",
    "rotation": "2"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "D.305.400.0950",
@@ -2537,7 +2873,8 @@
    "material": "Stainless Steel",
    "rotation": "2"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "D.355.400.0575",
@@ -2563,7 +2900,8 @@
    "material": "Stainless Steel",
    "rotation": "2"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "D.355.400.0700",
@@ -2589,7 +2927,8 @@
    "material": "Stainless Steel",
    "rotation": "2"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "D.408.320.1450",
@@ -2615,7 +2954,8 @@
    "material": "Stainless Steel",
    "rotation": "2"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "G.150.250.0950",
@@ -2641,7 +2981,8 @@
    "material": "Stainless Steel",
    "rotation": "1"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "G.196.360.0575",
@@ -2667,7 +3008,8 @@
    "material": "Stainless Steel",
    "rotation": "1"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "G.201.220.1275",
@@ -2693,7 +3035,8 @@
    "material": "Stainless Steel",
    "rotation": "1"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "G.220.300.0950",
@@ -2719,7 +3062,8 @@
    "material": "Stainless Steel",
    "rotation": "1"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "G.225.250.0200",
@@ -2745,7 +3089,8 @@
    "material": "Stainless Steel",
    "rotation": "1"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "G.255.400.0825",
@@ -2771,7 +3116,8 @@
    "material": "Stainless Steel",
    "rotation": "1"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "G.255.400.0950",
@@ -2797,7 +3143,8 @@
    "material": "Stainless Steel",
    "rotation": "1"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "G.276.290.1275",
@@ -2823,7 +3170,8 @@
    "material": "Stainless Steel",
    "rotation": "1"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "G.277.270.1175",
@@ -2849,7 +3197,8 @@
    "material": "Stainless Steel",
    "rotation": "1"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "G.280.320.1200",
@@ -2875,7 +3224,8 @@
    "material": "Stainless Steel",
    "rotation": "1"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "G.317.270.0700",
@@ -2901,7 +3251,8 @@
    "material": "Stainless Steel",
    "rotation": "1"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "G.320.300.0825",
@@ -2927,7 +3278,8 @@
    "material": "Stainless Steel",
    "rotation": "1"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "G.405.400.0325",
@@ -2953,7 +3305,8 @@
    "material": "Stainless Steel",
    "rotation": "1"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "G.405.400.0575",
@@ -2979,7 +3332,8 @@
    "material": "Stainless Steel",
    "rotation": "1"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  },
  {
   "sku": "G.405.400.0950",
@@ -3006,6 +3360,8 @@
    "rotation": "1"
   },
   "windingFromCategory": "right",
+  "productPageRead": true,
+  "productReadAt": "2026-09-30",
   "currentImage": {
    "file": "torsion_14.png",
    "url": "https://www.vanel.tech/media/catalog/product/cache/200627020346257e1449972bb7333446/t/o/torsion_14.png",
@@ -3036,6 +3392,7 @@
    "material": "304 Stainless Steel",
    "rotation": "Right"
   },
-  "windingFromCategory": "right"
+  "windingFromCategory": "right",
+  "productPageRead": false
  }
 ]

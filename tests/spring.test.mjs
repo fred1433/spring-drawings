@@ -45,18 +45,21 @@ test('the drawn spring spans exactly the free length, with the coil count of the
 
 const dimTexts = (svg) => [...svg.matchAll(/<text[^>]*fill="([^"]+)"[^>]*class="dim"[^>]*>([^<]*)<\/text>/g)].map((x) => ({ color: x[1], text: x[2] }));
 
-test('every dimension printed is a value read on the sheet, as read', () => {
+const fieldOf = (label) => (/^(Ø ext\.|OD)/.test(label) ? 'od' : /^(Ø int\.|ID)/.test(label) ? 'id' : /^(fil|wire)/.test(label) ? 'd' : 'freeLength');
+
+test('every dimension printed is the value of its own field on the sheet, as read', () => {
   for (const r of complete) {
     for (const lang of ['fr', 'en']) {
-      const { svg } = drawSheet(r, lang);
-      const dims = dimTexts(svg);
-      assert.ok(dims.length >= 4, `${r.sku}: ${dims.length} dimensions`);
-      for (const d of dims) {
-        const vals = [...d.text.matchAll(/(\d+(?:[.,]\d+)?) mm/g)].map((x) => x[1].replace(',', '.'));
-        assert.ok(vals.length === 1, `${r.sku}: "${d.text}"`);
-        const attrs = Object.values(r.attrs).filter(Boolean);
-        assert.ok(attrs.includes(vals[0]), `${r.sku}: ${vals[0]} is not a value of the sheet`);
-        assert.equal(d.color, READ);
+      for (const draw of [drawSheet, drawPlateWide, drawPlate]) {
+        const dims = dimTexts(draw(r, lang).svg).filter((d) => d.text);
+        assert.ok(dims.length >= 3, `${r.sku}: ${dims.length} dimensions`);
+        for (const d of dims) {
+          const vals = [...d.text.matchAll(/(\d+(?:[.,]\d+)?) mm/g)].map((x) => x[1].replace(',', '.'));
+          assert.equal(vals.length, 1, `${r.sku}: "${d.text}"`);
+          const k = fieldOf(d.text);
+          assert.equal(vals[0], r.attrs[k], `${r.sku} ${draw.name}: "${d.text}" is not ${k} = ${r.attrs[k]}`);
+          assert.equal(d.color, READ);
+        }
       }
     }
   }
@@ -140,6 +143,50 @@ test('the wire is drawn at its true thickness, at the scale of the drawing, in s
 test('in a catalog row, end view and side view share one scale', () => {
   for (const r of complete) {
     const { svg, model: m } = drawPlateWide(r, 'fr');
+    const scale = Number(svg.match(/data-scale="([\d.]+)"/)[1]);
+    const ro = Number(svg.match(/class="ro" cx="[^"]+" cy="[^"]+" r="([\d.]+)"/)[1]);
+    assert.ok(Math.abs(2 * ro - m.v.od * scale) <= 0.01 * m.v.od * scale + 0.02, r.sku);
+  }
+});
+
+test('the ends come from the record as read and stay in a variant', () => {
+  const r = recs.find((x) => x.sku === 'C.700.600.2000.I');
+  assert.equal(model(r).ground, true);
+  for (const o of [{ d: '6,2' }, { coils: '11' }, { d: '6.2', coils: '12', freeLength: '240' }]) {
+    const m = model(r, o);
+    assert.equal(m.ok, true);
+    assert.equal(m.ground, true, JSON.stringify(o));
+    assert.ok(drawSheet(r, 'fr', o).svg.includes('rapprochées et meulées'));
+  }
+  assert.equal(model(recs.find((x) => x.sku === 'C.600.600.3600.I'), { d: '5' }).ground, false);
+});
+
+test('a sheet without its block length is held back, not drawn with guessed ends', () => {
+  for (const r of comp) {
+    const hasEnds = r.attrs.blockLength || /^(yes|no)$/i.test(r.attrs.grinding || '');
+    if (!hasEnds) assert.equal(route(r).route, 'held', r.sku);
+  }
+  for (const r of complete) assert.ok(num(r.attrs.blockLength) !== null, `${r.sku} drawn without a block length`);
+});
+
+test('typed values: plain decimals with comma or point, within bounds, nothing else', () => {
+  const r = recs.find((x) => x.sku === 'C.700.600.2000.I');
+  for (const bad of ['1e3', 'abc', '2,5,1', '', ' ', '-5', '0x10', '20000']) {
+    const m = model(r, { freeLength: bad });
+    assert.equal(m.ok, false, `accepted "${bad}"`);
+    assert.equal(drawSheet(r, 'fr', { freeLength: bad }).svg, '');
+  }
+  assert.equal(model(r, { coils: '200' }).ok, false);
+  assert.equal(model(r, { coils: '2' }).ok, false);
+  const ok = model(r, { freeLength: '250,5' });
+  assert.equal(ok.ok, true);
+  assert.equal(ok.raw.freeLength, '250.5');
+  assert.ok(drawSheet(r, 'fr', { freeLength: '250,50' }).svg.includes('250,5 mm'));
+});
+
+test('specification sheet: end view and side view at one scale', () => {
+  for (const r of complete) {
+    const { svg, model: m } = drawSheet(r, 'fr');
     const scale = Number(svg.match(/data-scale="([\d.]+)"/)[1]);
     const ro = Number(svg.match(/class="ro" cx="[^"]+" cy="[^"]+" r="([\d.]+)"/)[1]);
     assert.ok(Math.abs(2 * ro - m.v.od * scale) <= 0.01 * m.v.od * scale + 0.02, r.sku);

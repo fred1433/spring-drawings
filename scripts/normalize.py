@@ -75,17 +75,20 @@ def main(lists_path, products_path):
                 if k in KEEP:
                     rec["attrs"][KEEP[k]] = clean(v)
             prod = products.get(it["href"]) if it["href"] else None
+            rec["productPageRead"] = bool(prod and prod.get("specs"))
             if prod:
                 specs = {k: v for k, v in prod["specs"] if k}
                 for k, v in specs.items():
                     if k in KEEP and rec["attrs"].get(KEEP[k]) is None:
                         rec["attrs"][KEEP[k]] = clean(v)
-                main = next((g for g in prod["gallery"] if g.get("isMain")), prod["gallery"][0])
-                rec["currentImage"] = {
-                    "file": main["full"].split("/")[-1],
-                    "url": main["full"],
-                    "readAt": prod["readAt"][:10],
-                }
+                rec["productReadAt"] = prod["readAt"][:10]
+                if prod.get("gallery"):
+                    main = next((g for g in prod["gallery"] if g.get("isMain")), prod["gallery"][0])
+                    rec["currentImage"] = {
+                        "file": main["full"].split("/")[-1],
+                        "url": main["full"],
+                        "readAt": prod["readAt"][:10],
+                    }
             out.append(rec)
     out.sort(key=lambda r: (r["family"], r["sku"]))
     json.dump(out, open("data/springs.json", "w"), indent=1, ensure_ascii=False)

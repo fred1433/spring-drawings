@@ -1,4 +1,4 @@
-import { drawPlate, drawPlateWide, drawSheet, catalogImage, model, route, findRecord, fmt, num } from './spring.js';
+import { drawPlate, drawPlateWide, drawSheet, catalogImage, model, route, findRecord, fmt, num, parseInput, BOUNDS } from './spring.js';
 
 const PLATE = ['C.692.560.0500.I', 'C.248.320.0224.A', 'C.980.550.1000.I', 'C.700.600.1200.I', 'C.371.320.1020.AP', 'C.700.600.2000.I', 'C.180.300.0780.A', 'C.600.600.3600.I'];
 const DEFAULT_REF = 'C.700.600.2000.I';
@@ -8,7 +8,7 @@ const I18N = {
     title: 'Ressorts dessinés à leurs cotes',
     where: "Planche d'essai pour vanel.tech",
     h1: 'Huit de vos ressorts, dessinés à leurs propres cotes.',
-    lede: "Chaque dessin vient des attributs de la fiche produit, lus sur vanel.tech le 30 septembre 2026. À gauche de chaque dessin, l'image que la fiche affichait ce jour-là.",
+    lede: "Chaque dessin vient des attributs de la fiche produit, lus sur vanel.tech le 30 septembre 2026. En regard de chaque dessin, l'image que la fiche affichait ce jour-là.",
     plateTitle: 'Planche',
     now: 'image de la fiche, 30/09/2026',
     tbTitle: 'Ressorts de compression, planche 1',
@@ -16,34 +16,36 @@ const I18N = {
     tbMethod: 'Méthode', tbMethodV: 'gabarit paramétrique, aucune retouche',
     tbKey: 'Couleur', tbRead: 'cote lue dans la fiche',
     tbLeft: 'À gauche', tbLeftV: 'image affichée par la fiche le 30/09/2026',
-    held: (sku, f) => `<b>${sku}</b> n'est pas dessinée : ${f} ${f.includes(' et ') ? 'sont vides' : 'est vide'} dans sa fiche. Une fiche incomplète est retenue, jamais complétée au jugé.`,
+    held: (sku, f, n) => `<b>${sku}</b> n'est pas dessinée : ${f} ${n > 1 ? 'manquent' : 'manque'} dans la liste de sa catégorie, seule source lue pour elle (sa page produit n'est pas liée depuis la liste et la recherche du site ne la renvoie pas).`,
+    heldEnd: 'Une fiche incomplète est retenue, jamais complétée au jugé.',
     tryTitle: 'Essayez une autre référence',
-    tryLede: "Collez une référence ou l'adresse de sa fiche : le ressort se dessine. Corrigez une cote, le dessin suit.",
+    tryLede: "Essayez une des références lues le 30/09/2026 : collez-la, ou l'adresse de sa fiche, et le ressort se dessine. Corrigez une cote, le dessin suit.",
     refLabel: 'Référence', dimsLegend: 'Cotes', fD: 'Diamètre du fil', fOd: 'Diamètre extérieur', fL: 'Longueur libre', fN: 'Spires totales',
     reset: 'Revenir aux valeurs de la fiche',
     capSheet: 'Dessin de spécification', dlSvg: 'Télécharger le SVG',
     capCatalog: 'Image catalogue, même cadrage pour toutes les références', dlPng: 'Télécharger le PNG',
     sourcesTitle: "D'où vient chaque trait",
     readOn: 'Fiche lue le', open: 'ouvrir la fiche',
-    notFound: (n) => `Cette référence n'est pas parmi les ${n} fiches de ressorts de compression lues. Essayez C.180.300.0780.A ou C.700.500.3600.I.`,
-    heldRef: (f) => `Fiche retenue : ${f} ${f.includes(' et ') ? 'sont vides' : 'est vide'} dans la fiche, rien n'est dessiné.`,
-    found: (n) => `Une des ${n} fiches de ressorts de compression lues le 30/09/2026.`,
+    notFound: (n) => `Pas de dessin : cette référence n'est pas parmi les ${n} ressorts de compression lus le 30/09/2026. Essayez C.180.300.0780.A ou C.700.500.3600.I.`,
+    heldRef: (f, n) => `Pas de dessin : fiche retenue, ${f} ${n > 1 ? 'manquent' : 'manque'} dans ce qui a été lu.`,
+    found: (n) => `Une des ${n} références de ressorts de compression lues le 30/09/2026.`,
+    bad: (f, lo, hi) => `${f} : un nombre décimal entre ${lo} et ${hi}, avec une virgule ou un point.`,
     variant: 'Variante hypothétique : les cotes modifiées sont en ocre, le Ø int. est recalculé, la longueur à charge max. de la fiche ne s\'applique plus.',
     invalid: "Ces valeurs ne décrivent pas un ressort dessinable : il faut un Ø ext. supérieur à deux fois le fil, plus de deux spires et un pas plus grand que le fil.",
     items: { d: 'Diamètre du fil', od: 'Diamètre extérieur', freeLength: 'Longueur libre', coils: 'Spires totales', id: 'Diamètre intérieur', lengthAtMaxLoad: 'Longueur à charge max. (note)', meanDiameter: "Diamètre moyen de l'hélice", pitch: 'Pas des spires actives', ends: 'Extrémités', winding: "Sens d'enroulement" },
-    from: { sheet: 'lu dans la fiche', edited: 'modifié ici', derived: 'calculé', assumed: 'par convention, absent de la fiche' },
+    from: { sheet: 'lu dans la fiche', edited: 'modifié ici', derived: 'calculé', assumed: "par convention : la famille n'a pas d'attribut de sens" },
     values: { 'closed, ground': 'rapprochées, meulées', closed: 'rapprochées, non meulées', 'right-hand': 'à droite' },
     howTitle: 'Ce que la chaîne fait déjà, et ce qui reste à brancher',
     how: [
       ['Ce qu\'elle lit.', 'Les attributs déjà publiés sur vos fiches : fil, diamètres, longueur libre, nombre de spires, pas, longueur à bloc. Rien d\'autre, et aucune IA dans le dessin.'],
       ['Ce qu\'elle produit.', 'Pour chaque référence, deux fichiers tirés des mêmes données : le dessin coté en SVG et une image catalogue en PNG, au même cadrage pour toute la famille. Une valeur corrigée dans la fiche, et les deux se redessinent.'],
-      ['Sur quoi repose la géométrie.', 'Sur les {n} fiches complètes lues, la longueur libre vaut toujours (spires − 2) × pas + 2 × fil : les spires sont comptées totales, une spire rapprochée à chaque bout. Le meulage se lit dans la longueur à bloc, (spires + 0,5) × fil quand le ressort est meulé. Le sens d\'enroulement ne figure pas dans la fiche : il est dessiné à droite, et c\'est écrit.'],
-      ['L\'aiguillage.', 'Une fiche complète est dessinée. Une fiche à qui manque une valeur essentielle est retenue et signalée. Une famille sans gabarit, aujourd\'hui la traction et la torsion, part en « à revoir » : aucune image n\'est inventée pour elle.'],
+      ['Sur quoi repose la géométrie.', 'Sur les {n} fiches complètes lues, la longueur libre vaut toujours (spires − 2) × pas + 2 × fil : les spires sont comptées totales, une spire rapprochée à chaque bout. Le meulage se lit dans la longueur à bloc, (spires + 0,5) × fil quand le ressort est meulé. Le sens d\'enroulement ne figure pas parmi les attributs : il est dessiné à droite, et le tableau des sources le dit.'],
+      ['L\'aiguillage.', 'Une fiche complète est dessinée. Une fiche à qui manque une valeur essentielle est retenue et signalée. Une famille sans gabarit, aujourd\'hui la traction et la torsion, reste hors gabarit : aucune image n\'est inventée pour elle.'],
       ['Magento.', '{magento}'],
       ['Et la CAO ?', 'Pour les familles prises en charge, un gabarit piloté par les attributs évite d\'ouvrir un modèle CAO à chaque mise à jour. La CAO reste utile là où elle donne une meilleure géométrie.'],
       ['Ce que cette planche ne prouve pas.', 'Les ressorts de traction et de torsion, la conversion de fichiers CAO ou STEP, la mise en service sur votre boutique, et le décodage des valeurs d\'options Magento : ici, la catégorie tient lieu de source.'],
     ],
-    proofCap: "Page produit de la boutique de test, avec l'image générée rattachée au SKU.",
+    proofCap: "Boutique de test : la page produit du SKU TEST-C.700.600.2000.I à la fin du parcours scripté, avec l'image générée rattachée.",
     madeBy: 'Réalisé par', repo: 'Code et tests',
     material: { 'Stainless Steel': 'inox', 'Music Wire': 'corde à piano' },
   },
@@ -51,7 +53,7 @@ const I18N = {
     title: 'Springs drawn to their dimensions',
     where: 'Test plate for vanel.tech',
     h1: 'Eight of your springs, drawn to their own dimensions.',
-    lede: 'Each drawing comes from the product sheet attributes, read on vanel.tech on September 30, 2026. Left of each drawing, the image the sheet showed that day.',
+    lede: 'Each drawing comes from the product sheet attributes, read on vanel.tech on September 30, 2026. Beside each drawing, the image the sheet showed that day.',
     plateTitle: 'Plate',
     now: 'image on the sheet, 2026-09-30',
     tbTitle: 'Compression springs, plate 1',
@@ -59,34 +61,36 @@ const I18N = {
     tbMethod: 'Method', tbMethodV: 'parametric template, no retouching',
     tbKey: 'Color', tbRead: 'dimension read on the sheet',
     tbLeft: 'Left', tbLeftV: 'image shown on the sheet on 2026-09-30',
-    held: (sku, f) => `<b>${sku}</b> is not drawn: ${f} ${f.includes(' and ') ? 'are' : 'is'} empty on its sheet. An incomplete sheet is held back, never filled in by guesswork.`,
+    held: (sku, f, n) => `<b>${sku}</b> is not drawn: ${f} ${n > 1 ? 'are' : 'is'} missing from its category list, the only source read for it (its product page is not linked from the list and the site search does not return it).`,
+    heldEnd: 'An incomplete sheet is held back, never filled in by guesswork.',
     tryTitle: 'Try another reference',
-    tryLede: 'Paste a reference or its product page address: the spring is drawn. Change a dimension, the drawing follows.',
+    tryLede: 'Try one of the references read on 2026-09-30: paste it, or its product page address, and the spring is drawn. Change a dimension, the drawing follows.',
     refLabel: 'Reference', dimsLegend: 'Dimensions', fD: 'Wire diameter', fOd: 'Outside diameter', fL: 'Free length', fN: 'Total coils',
     reset: 'Back to the sheet values',
     capSheet: 'Specification drawing', dlSvg: 'Download SVG',
     capCatalog: 'Catalog image, same framing for every reference', dlPng: 'Download PNG',
     sourcesTitle: 'Where every line comes from',
     readOn: 'Sheet read on', open: 'open the sheet',
-    notFound: (n) => `This reference is not among the ${n} compression spring sheets read. Try C.180.300.0780.A or C.700.500.3600.I.`,
-    heldRef: (f) => `Held back: ${f} ${f.includes(' and ') ? 'are' : 'is'} empty on the sheet, nothing is drawn.`,
-    found: (n) => `One of the ${n} compression spring sheets read on 2026-09-30.`,
+    notFound: (n) => `No drawing: this reference is not among the ${n} compression springs read on 2026-09-30. Try C.180.300.0780.A or C.700.500.3600.I.`,
+    heldRef: (f, n) => `No drawing: held back, ${f} ${n > 1 ? 'are' : 'is'} missing from what was read.`,
+    found: (n) => `One of the ${n} compression spring references read on 2026-09-30.`,
+    bad: (f, lo, hi) => `${f}: a decimal number between ${lo} and ${hi}, with a point or a comma.`,
     variant: 'Hypothetical variant: changed dimensions are in ochre, the ID is recalculated, the max-load length of the sheet no longer applies.',
     invalid: 'These values do not make a drawable spring: the OD must exceed twice the wire, with more than two coils and a pitch larger than the wire.',
     items: { d: 'Wire diameter', od: 'Outside diameter', freeLength: 'Free length', coils: 'Total coils', id: 'Inside diameter', lengthAtMaxLoad: 'Length at max. load (note)', meanDiameter: 'Mean helix diameter', pitch: 'Pitch of the active coils', ends: 'Ends', winding: 'Winding sense' },
-    from: { sheet: 'read on the sheet', edited: 'changed here', derived: 'calculated', assumed: 'by convention, not on the sheet' },
+    from: { sheet: 'read on the sheet', edited: 'changed here', derived: 'calculated', assumed: 'by convention: the family has no winding attribute' },
     values: { 'closed, ground': 'closed, ground', closed: 'closed, not ground', 'right-hand': 'right-hand' },
     howTitle: 'What the pipeline already does, and what is left to connect',
     how: [
       ['What it reads.', 'The attributes already published on your product sheets: wire, diameters, free length, coil count, pitch, block length. Nothing else, and no AI in the drawing.'],
       ['What it produces.', 'For each reference, two files from the same data: the dimensioned drawing as SVG and a catalog image as PNG, framed the same way across the family. Correct a value on the sheet and both are redrawn.'],
-      ['What the geometry rests on.', 'On the {n} complete sheets read, free length always equals (coils − 2) × pitch + 2 × wire: coils are counted as total, one closed coil at each end. Grinding is read from the block length, (coils + 0.5) × wire when ground. Winding sense is not on the sheet: it is drawn right-hand, and the drawing says so.'],
-      ['Routing.', 'A complete sheet is drawn. A sheet missing an essential value is held back and flagged. A family without a template, today extension and torsion springs, goes to "review": no image is invented for it.'],
+      ['What the geometry rests on.', 'On the {n} complete sheets read, free length always equals (coils − 2) × pitch + 2 × wire: coils are counted as total, one closed coil at each end. Grinding is read from the block length, (coils + 0.5) × wire when ground. Winding sense is not among the attributes: it is drawn right-hand, and the provenance table says so.'],
+      ['Routing.', 'A complete sheet is drawn. A sheet missing an essential value is held back and flagged. A family without a template, today extension and torsion springs, stays outside the template: no image is invented for it.'],
       ['Magento.', '{magento}'],
       ['What about CAD?', 'For the supported families, an attribute-driven template avoids opening a CAD model at every update. CAD stays useful where it gives better geometry.'],
       ['What this plate does not prove.', 'Extension and torsion springs, converting CAD or STEP files, going live on your store, and decoding Magento option values: here the category stands in as the source.'],
     ],
-    proofCap: 'Product page of the test store, with the generated image attached to the SKU.',
+    proofCap: 'Test store: the product page of SKU TEST-C.700.600.2000.I at the end of the scripted run, with the generated image attached.',
     madeBy: 'Made by', repo: 'Code and tests',
     material: {},
   },
@@ -134,8 +138,7 @@ function renderPlate() {
   }
   animatePlate();
   const held = records.filter((r) => route(r).route === 'held');
-  const names = (f) => f.map(fieldName).join(lang === 'fr' ? ' et ' : ' and ');
-  $('#held').innerHTML = held.length ? L().held(held[0].sku, names(route(held[0]).fields)) : '';
+  $('#held').innerHTML = held.length ? held.map((r) => { const f = route(r).fields; return L().held(r.sku, names(f), f.length); }).join(' ') + ' ' + L().heldEnd : '';
 }
 
 let animated = false;
@@ -159,9 +162,11 @@ function animatePlate() {
   });
 }
 
+const names = (f) => { const a = f.map(fieldName); return a.length < 2 ? a.join('') : `${a.slice(0, -1).join(', ')}${lang === 'fr' ? ' et ' : ' and '}${a.at(-1)}`; };
+
 function fieldName(k) {
-  const fr = { coils: 'le nombre de spires', pitch: 'le pas', d: 'le diamètre du fil', od: 'le diamètre extérieur', freeLength: 'la longueur libre' };
-  const en = { coils: 'the coil count', pitch: 'the pitch', d: 'the wire diameter', od: 'the outside diameter', freeLength: 'the free length' };
+  const fr = { coils: 'le nombre de spires', pitch: 'le pas', blockLength: 'la longueur à bloc', d: 'le diamètre du fil', od: 'le diamètre extérieur', freeLength: 'la longueur libre' };
+  const en = { coils: 'the coil count', pitch: 'the pitch', blockLength: 'the block length', d: 'the wire diameter', od: 'the outside diameter', freeLength: 'the free length' };
   return (lang === 'fr' ? fr : en)[k] || k;
 }
 
@@ -183,25 +188,42 @@ function fillDims(r) {
   }
 }
 
+let msg = null; // { key, args, bad }
+function showMsg() {
+  const el = $('#refMsg');
+  el.textContent = msg ? L()[msg.key](...msg.args()) : '';
+  el.classList.toggle('bad', !!msg?.bad);
+}
+let shown = false; // the drawing on screen belongs to the reference in the field
+
+function fade(on) {
+  for (const id of ['#sheet', '#catalog']) $(id).style.opacity = on ? '0.18' : '';
+  $('#dlSvg').disabled = on;
+  $('#dlPng').disabled = on;
+  if (on) $('#sources').innerHTML = '';
+}
+
 function renderTry() {
-  if (!current) return;
+  showMsg();
+  if (!current || !shown) { fade(true); return; }
   const o = overrides();
   const m = model(current, o);
   for (const inp of document.querySelectorAll('#dims input')) {
-    const changed = inp.value.trim() !== '' && num(inp.value) !== num(current.attrs[inp.name]);
-    inp.classList.toggle('changed', changed);
+    const p = parseInput(inp.name, inp.value);
+    inp.classList.toggle('changed', !p.ok || p.value !== num(current.attrs[inp.name]));
+    inp.setAttribute('aria-invalid', String(!p.ok));
   }
-  $('#reset').hidden = !m.variant;
+  $('#reset').hidden = !m.variant && m.ok;
   if (!m.ok) {
-    $('#variantMsg').textContent = m.reason === 'missing' ? '' : L().invalid;
-    $('#sheet').style.opacity = '0.35';
-    $('#catalog').style.opacity = '0.35';
+    const T = { d: L().fD, od: L().fOd, freeLength: L().fL, coils: L().fN };
+    $('#variantMsg').textContent = m.reason === 'input'
+      ? m.badInput.map((b) => L().bad(T[b.field], fmt(String(BOUNDS[b.field][0]), lang), fmt(String(BOUNDS[b.field][1]), lang))).join(' ')
+      : L().invalid;
+    fade(true);
     return;
   }
-  $('#sheet').style.opacity = '';
-  $('#catalog').style.opacity = '';
+  fade(false);
   $('#variantMsg').textContent = m.variant ? L().variant : '';
-  $('#reset').hidden = !m.variant;
   const narrow = window.matchMedia('(max-width: 600px)').matches;
   $('#sheet').innerHTML = narrow ? drawPlate(current, lang, o).svg : drawSheet(current, lang, o).svg;
   $('#catalog').innerHTML = catalogImage(current, 800, o).svg;
@@ -212,7 +234,7 @@ function renderTry() {
   });
   $('#sources').innerHTML = rows.join('');
   const url = current.productUrl || current.categoryUrl;
-  $('#sourceLink').innerHTML = `${L().readOn} ${current.readAt} : <a href="${url}" rel="noopener" target="_blank">${L().open}</a>`;
+  $('#sourceLink').innerHTML = `${L().readOn} ${current.productReadAt || current.readAt} : <a href="${url}" rel="noopener" target="_blank">${L().open}</a>`;
 }
 
 const FORMULAS = {
@@ -224,23 +246,27 @@ const FORMULAS = {
 };
 function pretty(f) { return FORMULAS[f]?.[lang] || f; }
 
+function drawable() { return records.filter((r) => r.family === 'compression' && route(r).route === 'svg'); }
+
 function selectRef(input, fromUser) {
-  const comp = records.filter((r) => r.family === 'compression');
-  const r = findRecord(comp, input);
-  if (!r) {
-    if (fromUser && String(input).trim()) { $('#refMsg').textContent = L().notFound(comp.length); $('#refMsg').classList.add('bad'); }
+  const r = findRecord(records, input);
+  const n = drawable().length;
+  if (!r || r.family !== 'compression') {
+    if (fromUser && String(input).trim()) { msg = { key: 'notFound', args: () => [n], bad: true }; shown = false; renderTry(); }
     return;
   }
-  $('#refMsg').classList.remove('bad');
   const rt = route(r);
-  if (rt.route === 'held') {
-    $('#refMsg').textContent = L().heldRef(rt.fields.map(fieldName).join(lang === 'fr' ? ' et ' : ' and '));
-    $('#refMsg').classList.add('bad');
+  if (rt.route !== 'svg') {
+    const f = rt.fields || [];
+    msg = { key: 'heldRef', args: () => [names(f), f.length], bad: true };
+    shown = false;
+    renderTry();
     return;
   }
   current = r;
+  shown = true;
   $('#ref').value = r.sku;
-  $('#refMsg').textContent = L().found(comp.length);
+  msg = { key: 'found', args: () => [n], bad: false };
   fillDims(r);
   renderTry();
 }
@@ -258,7 +284,7 @@ async function init() {
   const res = await fetch('springs.json');
   records = await res.json();
   const dl = $('#skus');
-  for (const r of records.filter((x) => x.family === 'compression' && route(x).route === 'svg')) {
+  for (const r of drawable()) {
     const o = document.createElement('option');
     o.value = r.sku;
     dl.appendChild(o);
@@ -273,16 +299,17 @@ async function init() {
   if (q.get('ref')) selectRef(q.get('ref'), true);
   else selectRef(DEFAULT_REF, false);
 
-  for (const b of document.querySelectorAll('.lang button')) b.addEventListener('click', () => { const o = overrides(); setLang(b.dataset.lang); for (const inp of document.querySelectorAll('#dims input')) if (o[inp.name]) inp.value = fmt(o[inp.name], lang); renderTry(); });
+  for (const b of document.querySelectorAll('.lang button')) b.addEventListener('click', () => { const o = overrides(); setLang(b.dataset.lang); for (const inp of document.querySelectorAll('#dims input')) if (parseInput(inp.name, o[inp.name]).ok) inp.value = fmt(o[inp.name].replace(',', '.'), lang); renderTry(); });
   $('#ref').addEventListener('change', (e) => selectRef(e.target.value, true));
-  $('#ref').addEventListener('input', (e) => { const r = findRecord(records, e.target.value); if (r && r.sku !== current?.sku) selectRef(e.target.value, true); });
+  $('#ref').addEventListener('input', (e) => { const r = findRecord(records, e.target.value); if (r && r.sku !== current?.sku) selectRef(e.target.value, true); else if (!r && shown && e.target.value.trim() !== current?.sku) { shown = false; msg = null; renderTry(); } });
   $('#controls').addEventListener('submit', (e) => { e.preventDefault(); selectRef($('#ref').value, true); });
   $('#dims').addEventListener('input', renderTry);
   window.matchMedia('(max-width: 600px)').addEventListener('change', renderTry);
   $('#reset').addEventListener('click', () => { fillDims(current); renderTry(); });
-  $('#dlSvg').addEventListener('click', () => download(`${current.sku}.svg`, new Blob([drawSheet(current, lang, overrides()).svg], { type: 'image/svg+xml' })));
+  $('#dlSvg').addEventListener('click', () => { const svg = drawSheet(current, lang, overrides()).svg; if (!shown || !svg) return; download(`${current.sku}.svg`, new Blob([svg], { type: 'image/svg+xml' })); });
   $('#dlPng').addEventListener('click', () => {
     const svg = catalogImage(current, 800, overrides()).svg;
+    if (!shown || !svg) return;
     const img = new Image();
     img.onload = () => {
       const c = document.createElement('canvas');

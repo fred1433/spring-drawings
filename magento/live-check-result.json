@@ -1,5 +1,5 @@
 {
- "ranAt": "2026-09-30T13:01:43.078Z",
+ "ranAt": "2026-09-30T16:08:01.251Z",
  "log": [
   {
    "step": "store",
@@ -40,8 +40,8 @@
    "action": "added",
    "entries": [
     {
-     "id": 7,
-     "file": "/t/e/test-c-700-600-2000-i-sd-4f67ebfbc8.png",
+     "id": 12,
+     "file": "/t/e/test-c-700-600-2000-i-sd-b610585105.png",
      "types": [
       "image",
       "small_image",
@@ -50,7 +50,7 @@
      "label": "Compression spring C.700.600.2000.I"
     },
     {
-     "id": 5,
+     "id": 10,
      "file": "/c/o/compression_product.png",
      "types": [],
      "label": null
@@ -64,7 +64,7 @@
   },
   {
    "step": "storefront",
-   "url": "http://127.0.0.1:8088/test-spring-0-1790773291028.html",
+   "url": "http://127.0.0.1:8088/test-spring-0-1790784475160.html",
    "showsManagedImage": true,
    "altLabel": true
   },
@@ -72,12 +72,12 @@
    "step": "replace",
    "action": "replaced",
    "removed": [
-    7
+    12
    ],
    "entries": [
     {
-     "id": 8,
-     "file": "/t/e/test-c-700-600-2000-i-sd-c211bc6081.png",
+     "id": 13,
+     "file": "/t/e/test-c-700-600-2000-i-sd-3ebdc01029.png",
      "types": [
       "image",
       "small_image",
@@ -85,7 +85,7 @@
      ]
     },
     {
-     "id": 5,
+     "id": 10,
      "file": "/c/o/compression_product.png",
      "types": []
     }
@@ -96,7 +96,7 @@
    "action": "rolled-back",
    "entries": [
     {
-     "id": 5,
+     "id": 10,
      "file": "/c/o/compression_product.png",
      "types": [
       "image",
@@ -105,6 +105,19 @@
      ]
     }
    ]
+  },
+  {
+   "step": "final",
+   "action": "added",
+   "url": "http://127.0.0.1:8088/test-spring-0-1790784475160.html",
+   "showsManagedImage": true,
+   "inStock": false
+  },
+  {
+   "step": "storefront-after-manual-reindex",
+   "note": "php bin/magento indexer:reindex && cache:flush run by hand after the script (MSI stock index); the product page then shows IN STOCK with the managed image",
+   "url": "http://127.0.0.1:8088/test-spring-0-1790784475160.html",
+   "inStock": true
   }
  ]
 }
