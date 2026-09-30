@@ -146,6 +146,7 @@ figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; ali
 .sources .from-sheet { color: var(--read); }
 .sources .from-edited { color: var(--edited); }
 .sources .from-derived, .sources .from-assumed { color: var(--pencil); }
+.sources .from-na { color: var(--pencil); text-decoration: line-through; }
 .source-link { font-size: 13.5px; color: var(--pencil); margin: 10px 0 0; overflow-wrap: anywhere; }
 
 /* ---------- how ---------- */

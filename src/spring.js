@@ -165,7 +165,7 @@ function sources(m) {
   read('freeLength', 'dimension');
   read('coils', 'geometry');
   S.push({ item: 'id', value: m.idValue, from: m.idCalc ? 'derived' : 'sheet', formula: m.idCalc ? 'od - 2 d' : null, drawnAs: 'dimension' });
-  if (m.raw.lengthAtMaxLoad) S.push({ item: 'lengthAtMaxLoad', value: m.raw.lengthAtMaxLoad, from: 'sheet', drawnAs: 'note' });
+  if (m.raw.lengthAtMaxLoad) S.push({ item: 'lengthAtMaxLoad', value: m.raw.lengthAtMaxLoad, from: m.variant ? 'na' : 'sheet', drawnAs: m.variant ? 'none' : 'note' });
   S.push({ item: 'meanDiameter', value: String(Math.round((m.v.od - m.v.d) * 100) / 100), from: 'derived', formula: 'od - d', drawnAs: 'geometry' });
   S.push({ item: 'pitch', value: String(Math.round(m.activePitch * 100) / 100), from: 'derived', formula: m.ground ? '(freeLength - 2 d) / (coils - 2)' : '(freeLength - 3 d) / (coils - 2)', drawnAs: 'geometry' });
   S.push({ item: 'ends', value: m.ground ? 'closed, ground' : 'closed', from: m.groundFrom === 'block' ? 'derived' : m.groundFrom === 'grinding' ? 'sheet' : 'assumed', formula: m.groundFrom === 'block' ? 'blockLength = (coils + 0.5) d if ground, (coils + 1.5) d if not' : null, drawnAs: 'geometry' });

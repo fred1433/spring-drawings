@@ -35,20 +35,20 @@ const I18N = {
     capCatalog: 'Image catalogue, même cadrage pour toutes les références', dlPng: 'Télécharger le PNG',
     sourcesTitle: "D'où vient chaque trait",
     readOn: 'Fiche lue le', open: 'ouvrir la fiche',
-    notFound: (n) => `Pas de dessin : cette référence n'est pas parmi les ${n} ressorts de compression lus le 30/09/2026. Essayez C.180.300.0780.A ou C.700.500.3600.I.`,
+    notFound: (n) => `Pas de dessin : cette référence n'est pas parmi les ${n} ressorts de compression lus le 30/09/2026. Essayez C.180.300.0780.A ou C.700.600.1200.I.`,
     heldRef: (f, n) => `Pas de dessin : fiche retenue, ${f} ${n > 1 ? 'manquent' : 'manque'} dans ce qui a été lu.`,
     found: (n) => `Une des ${n} références de ressorts de compression lues le 30/09/2026.`,
     bad: (f, lo, hi) => `${f} : un nombre décimal entre ${lo} et ${hi}, avec une virgule ou un point.`,
     variant: 'Variante hypothétique : les cotes modifiées sont en ocre, le Ø int. est recalculé, la longueur à charge max. de la fiche ne s\'applique plus.',
     invalid: "Ces valeurs ne décrivent pas un ressort dessinable : il faut un Ø ext. supérieur à deux fois le fil, plus de deux spires, un pas plus grand que le fil et une longueur libre supérieure à la longueur à bloc.",
     items: { d: 'Diamètre du fil', od: 'Diamètre extérieur', freeLength: 'Longueur libre', coils: 'Spires totales', id: 'Diamètre intérieur', lengthAtMaxLoad: 'Longueur à charge max. (note)', meanDiameter: "Diamètre moyen de l'hélice", pitch: 'Pas des spires actives', ends: 'Extrémités', winding: "Sens d'enroulement" },
-    from: { sheet: 'lu dans la fiche', edited: 'modifié ici', derived: 'calculé', assumed: "par convention : la famille n'a pas d'attribut de sens" },
+    from: { na: 'inapplicable à la variante', sheet: 'lu dans la fiche', edited: 'modifié ici', derived: 'calculé', assumed: "par convention : la famille n'a pas d'attribut de sens" },
     values: { 'closed, ground': 'rapprochées, meulées', closed: 'rapprochées, non meulées', 'right-hand': 'à droite' },
     howTitle: 'Ce que la chaîne fait déjà, et ce qui reste à brancher',
     how: [
       ['Ce qu\'elle lit.', 'Les attributs déjà publiés sur vos fiches : fil, diamètres, longueur libre, nombre de spires, pas, longueur à bloc. Rien d\'autre, et aucune IA dans le dessin.'],
       ['Ce qu\'elle produit.', 'Pour chaque référence, deux fichiers tirés des mêmes données : le dessin coté en SVG et une image catalogue en PNG, au même cadrage pour toute la famille. Dans cette démo, modifiez une cote : le SVG et le PNG se redessinent. La lecture automatique de vos attributs Magento reste à brancher.'],
-      ['Sur quoi repose la géométrie.', 'Sur les {n} fiches complètes lues, la longueur libre vaut toujours (spires − 2) × pas + 2 × fil : les spires sont comptées totales, une spire rapprochée à chaque bout. Le meulage se lit dans la longueur à bloc, (spires + 0,5) × fil quand le ressort est meulé. Le sens d\'enroulement ne figure pas parmi les attributs : il est dessiné à droite, et le tableau des sources le dit.'],
+      ['Sur quoi repose la géométrie.', 'Sur les {m} fiches complètes lues ({n} dessinées ici), la longueur libre vaut toujours (spires − 2) × pas + 2 × fil : les spires sont comptées totales, une spire rapprochée à chaque bout. Le meulage se lit dans la longueur à bloc, (spires + 0,5) × fil quand le ressort est meulé. Le sens d\'enroulement ne figure pas parmi les attributs : il est dessiné à droite, et le tableau des sources le dit.'],
       ['L\'aiguillage.', 'Une fiche complète et cohérente (pas, longueur à bloc, Ø int. contrôlés) est dessinée : dessinable avec ce gabarit, ce qui ne vaut pas validation mécanique. Une fiche à qui manque une valeur essentielle, ou qui échoue à un contrôle, est retenue et signalée. Une famille sans gabarit, aujourd\'hui la traction et la torsion, reste hors gabarit : aucune image n\'est inventée pour elle.'],
       ['Magento.', '{magento}'],
       ['Et la CAO ?', 'Pour les familles prises en charge, un gabarit piloté par les attributs évite d\'ouvrir un modèle CAO à chaque mise à jour. La CAO reste utile là où elle donne une meilleure géométrie.'],
@@ -88,20 +88,20 @@ const I18N = {
     capCatalog: 'Catalog image, same framing for every reference', dlPng: 'Download PNG',
     sourcesTitle: 'Where every line comes from',
     readOn: 'Sheet read on', open: 'open the sheet',
-    notFound: (n) => `No drawing: this reference is not among the ${n} compression springs read on 2026-09-30. Try C.180.300.0780.A or C.700.500.3600.I.`,
+    notFound: (n) => `No drawing: this reference is not among the ${n} compression springs read on 2026-09-30. Try C.180.300.0780.A or C.700.600.1200.I.`,
     heldRef: (f, n) => `No drawing: held back, ${f} ${n > 1 ? 'are' : 'is'} missing from what was read.`,
     found: (n) => `One of the ${n} compression spring references read on 2026-09-30.`,
     bad: (f, lo, hi) => `${f}: a decimal number between ${lo} and ${hi}, with a point or a comma.`,
     variant: 'Hypothetical variant: changed dimensions are in ochre, the ID is recalculated, the max-load length of the sheet no longer applies.',
     invalid: 'These values do not make a drawable spring: the OD must exceed twice the wire, more than two coils, a pitch larger than the wire and a free length above the block length.',
     items: { d: 'Wire diameter', od: 'Outside diameter', freeLength: 'Free length', coils: 'Total coils', id: 'Inside diameter', lengthAtMaxLoad: 'Length at max. load (note)', meanDiameter: 'Mean helix diameter', pitch: 'Pitch of the active coils', ends: 'Ends', winding: 'Winding sense' },
-    from: { sheet: 'read on the sheet', edited: 'changed here', derived: 'calculated', assumed: 'by convention: the family has no winding attribute' },
+    from: { na: 'does not apply to the variant', sheet: 'read on the sheet', edited: 'changed here', derived: 'calculated', assumed: 'by convention: the family has no winding attribute' },
     values: { 'closed, ground': 'closed, ground', closed: 'closed, not ground', 'right-hand': 'right-hand' },
     howTitle: 'What the pipeline already does, and what is left to connect',
     how: [
       ['What it reads.', 'The attributes already published on your product sheets: wire, diameters, free length, coil count, pitch, block length. Nothing else, and no AI in the drawing.'],
       ['What it produces.', 'For each reference, two files from the same data: the dimensioned drawing as SVG and a catalog image as PNG, framed the same way across the family. In this demo, change a dimension: the SVG and the PNG are redrawn. Reading your Magento attributes automatically is still to be connected.'],
-      ['What the geometry rests on.', 'On the {n} complete sheets read, free length always equals (coils − 2) × pitch + 2 × wire: coils are counted as total, one closed coil at each end. Grinding is read from the block length, (coils + 0.5) × wire when ground. Winding sense is not among the attributes: it is drawn right-hand, and the provenance table says so.'],
+      ['What the geometry rests on.', 'On the {m} complete sheets read ({n} drawn here), free length always equals (coils − 2) × pitch + 2 × wire: coils are counted as total, one closed coil at each end. Grinding is read from the block length, (coils + 0.5) × wire when ground. Winding sense is not among the attributes: it is drawn right-hand, and the provenance table says so.'],
       ['Routing.', 'A complete and consistent sheet (pitch, block length, ID checked) is drawn: drawable with this template, which is not a mechanical validation. A sheet missing an essential value, or failing a check, is held back and flagged. A family without a template, today extension and torsion springs, stays outside the template: no image is invented for it.'],
       ['Magento.', '{magento}'],
       ['What about CAD?', 'For the supported families, an attribute-driven template avoids opening a CAD model at every update. CAD stays useful where it gives better geometry.'],
@@ -203,7 +203,7 @@ function fieldName(k) {
 
 function renderHow() {
   const n = records.filter((r) => route(r).route === 'svg').length;
-  $('#howBody').innerHTML = L().how.map(([h, p]) => `<p><b>${h}</b> ${p.replace('{n}', n).replace('{magento}', MAGENTO[lang])}</p>`).join('') + `<p class="validate"><b>${L().validate}</b></p>`;
+  $('#howBody').innerHTML = L().how.map(([h, p]) => `<p><b>${h}</b> ${p.replace('{n}', n).replace('{m}', records.filter((r) => ['svg'].includes(route(r).route) || route(r).reason === 'ends-convention').length).replace('{magento}', MAGENTO[lang])}</p>`).join('') + `<p class="validate"><b>${L().validate}</b></p>`;
 }
 
 function overrides() {
